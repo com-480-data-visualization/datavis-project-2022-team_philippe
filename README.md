@@ -5,7 +5,7 @@
 | Student's name | SCIPER |
 | -------------- | ------ |
 | Guillaume Parchet | 283294 |
-| Arnaud Gaudard | XXXXXX |
+| Arnaud Gaudard | 269672 |
 | Roxane Pangaud | 283177 |
 
 ## Milestone 1 (8th April, 5pm)
@@ -93,7 +93,7 @@ Originality of our approach:
 Our approach is interesting as it focuses on **TODO**
 
 
-Sources of inspiration for out project:
+Sources of inspiration for the project:
 
 
 
