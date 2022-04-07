@@ -1,6 +1,6 @@
 # Data Visualization Project (COM-480)
 
-## Insert outstanding title **TODO**
+## Studio Bibli <!--Insert outstanding title **TODO**-->
 
 | Student's name | SCIPER |
 | -------------- | ------ |
@@ -10,11 +10,13 @@
 
 ## Milestone 1 (8th April, 5pm)
 
+For the project, we wanted to talk about a subject that all of us enjoy. After some discussions and research, we decided to do something about books. Indeed, since book have covers, it could lead to promising visualisation.
+
 ### Dataset
 
 The main data basis of our work will be the "Best Books Ever Dataset". Published in November 2020, it can be found on [Zenodo](https://zenodo.org/record/4265096#.Yisi6nrMKUl).
 
-The original data has been collected from [GoodReads - Best Books Ever](https://www.goodreads.com/list/show/1.Best_Books_Ever) and contains 25 variables and 52478 records. By default, the dataset contains the following features:
+The original data has been collected from [GoodReads - Best Books Ever](https://www.goodreads.com/list/show/1.Best_Books_Ever) and contains 25 variables and 52478 records (books). By default, the dataset contains the following features:
 
 | Attributes  | Definition | Completeness |
 | ------------- | ------------- | ------------- |
@@ -44,19 +46,25 @@ The original data has been collected from [GoodReads - Best Books Ever](https://
 | bbeVotes | Number of votes in Best Books Ever list | 100% |
 | price | Book's price (extracted from Iberlibro) | 73% |
 
-After a quick inspection of the data, it seems to be qualitative (low amount of missing data on most important fields, no corrupted data, etc...). It will require some pre-processing
-such as filtering non-english books or grouping them by language, **TODO if more**.
+After a quick inspection of the data, it seems to be qualitative (low amount of missing data on most important fields, no corrupted data, etc...). It will require some pre-processing though, such as filtering non-english books or grouping them by language and harmonize the publisher names. 
+
+We will also create new variables like the number of words in the title, the length of the series, some key words of the description and the number of awards won.
 
 ### Problematic
+For this project, we want to ask us 4 questions:
+1) Is it possible to generate a good book recomandation system, only based on language similarities on the book description?
+2) Does the prize, number of page or number of words in the title make us like a book more?
+3) Is there some publisher that publish books that are more likable?
+4) Is there a genre that is more expensive and/or has more pages than the others?
 
-The main aspect we would like to show with our visualization is
+We are aware that since we will only consider english books, some similarities in english may differ from french so the recommendations generated may differ from our culture.
 
 
-Examples of vues that could bring value to the visualization:
- - 1
- - 2
- - 3
- - etc...
+Here are some ideas of some visualisation that we could do:
+ - 1 Just a giant library like we can have on the TV on Netflix but it is on the web for books, alphabeticaly sorted. The idea is that when you select a book, you will get the informations about the book (Title, desciption, cover type, ...) and some recommandations about other book "similar" to that one.
+ - 2 A "Top favorite" graph where the user can select a genre and see the most liked book of the genre
+ - 3 A visualisation of the biggest publishers, what genre of book they publish, the cost of their books and how much they are liked.
+ - 4 a time table of when the books were published (or first published if the variable exist for the book)
 
 First sktech drawings of what the main pages could look like:
 
