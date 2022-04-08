@@ -99,11 +99,11 @@ The "Best Book Dataset" has been used by Stacy Stephanie McDonald for his Master
 
 Originality of our approach:
 
-Our approach is interesting as it focuses on recommendation based on a similarity measure on the books descriptions. Also, in our website, we don't want to sell books. We want to show them. So the way we will visualize them will be totally different.
+Our approach is interesting as it focuses on recommendation based on a similarity measure on the books descriptions. Also, in our website, we don't want to sell books. We want to display them. So the way we will visualize them will be totally different.
 
 
 Sources of inspiration for the project:
-Here are some websites that inspire us for our web design. They do not use the same dataset than us.
+Here are some websites that inspire us for our web design. They do not use the same dataset as we.
 
 * [What Should I Read Next?](https://www.whatshouldireadnext.com/) - In this website, the search bar and the way it is showing the recommandations in a list are great;
 * [PlaySuisse](https://www.playsuisse.ch/) - The way the films are shown is instinctive and fluid. It would be very inovative to do so with books. Also, when we put our mouse on a film without clicking on it, we have more infomation that shows like the title, the genre and the duration. We can imagine to do the same for the books with the title, the author, the genre and the number of pages.
