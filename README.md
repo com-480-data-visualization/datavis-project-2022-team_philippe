@@ -91,6 +91,10 @@ For the languages, a large majority of books in the dataset were written in Engl
 
 We tried seeing if the author had a significant correlation with the book's rating, and we found a correlation of about 0. Also, we saw that the large majority of ratings are high. We count only 310 ratings under 3 out of 5, out of the 68'000 available ratings. Their mean is 4.04 and their standard deviation is 0.35, so we will probably rescale them.
 
+Finally, we checked if there were any obvious correlations between the different numerical statistics from the books. The analysis is yet fairly simple and only yields minor insights:
+
+<img src="/img/first_numerical_corr.png" width="300" >
+
 ### Related work
 
 What has been already done with this data:
