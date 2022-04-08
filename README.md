@@ -95,7 +95,7 @@ Finally, we checked if there were any obvious correlations between the different
 
 <img src="/img/first_numerical_corr.png" width="700" >
 
-With this picture, we see that we do not have strong correlation. So there is no use in our project to show graphs about how a variable influence another one.
+With this picture, we see that we do not have strong correlation in first sight. So there might be little relevant to show graphs about how a variable influence another one.
 
 ### Related work
 
