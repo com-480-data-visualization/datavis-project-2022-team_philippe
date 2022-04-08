@@ -94,7 +94,7 @@ We tried seeing if the author had a significant correlation with the book's rati
 
 Finally, we checked if there were any obvious correlations between the different numerical statistics from the books. The analysis is yet fairly simple and only yields minor insights (summarizing correlation visualization below, more details in the notebook).
 
-<img src="/img/first_numerical_corr.png" width="700" >
+![Correlation of numerical columns](img/first_numerical_corr.png)
 
 With this picture, we see that we do not have strong correlation in first sight. So there might be little relevant to show graphs about how a variable influence another one.
 
