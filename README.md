@@ -53,6 +53,7 @@ We will also create new variables like the number of words in the title, the len
 
 ### Problematic
 This project has two mains purposes. The first one is to implement a book library and a dynamic top favorite list based on the genre. The aim here is for the visitor to be oriented for his next reading :
+
 * With the top favorite list
 * By clicking on a book that they like in the library
   * There will be other book recommendations, based on how similar the books' descriptions are 
