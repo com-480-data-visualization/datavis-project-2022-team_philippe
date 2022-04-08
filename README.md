@@ -51,22 +51,18 @@ After a quick inspection of the data, it seems to be qualitative (low amount of 
 We will also create new variables like the number of words in the title, the length of the series, some key words of the description and the number of awards won.
 
 ### Problematic
-For this project, we want to ask us 4 questions:
-1) Is it possible to generate a good book recomandation system, only based on language similarities on the book description?
-2) Does the prize, number of page or number of words in the title make us like a book more?
-3) Is there some publisher that publish books that are more likable?
-4) Is there a genre that is more expensive and/or has more pages than the others?
+This project has two mains purposes. The first one is to implement a book library and a dynamical top favorit list based on the genre. The aim here is for the visitor to be oriented for his next reading (with the top favorite list or by clicking on a book on the library that he liked, where on its description there is book recommendations based on a similarity on the book description variable). Then, we will visualise the books market dynamics, to understand better if the externals parameters of a book (prize, number of pages, type of cover, publisher, ...) influence its popularity, if a genre tend to have more pages, be more expensive or more popular than others, or if a publisher publish more likable books than others and what genre they publish. 
 
-We are aware that since we will only consider english books, some similarities in english may differ from french so the recommendations generated may differ from our culture.
+We are aware that since we will only consider english books, some similarities in the book description in english may differ from french so the recommendations generated may differ from our culture.
 
 
-Here are some ideas of some visualisation that we could do:
- - 1 Just a giant library like we can have on the TV on Netflix but it is on the web for books, alphabeticaly sorted. The idea is that when you select a book, you will get the informations about the book (Title, desciption, cover type, ...) and some recommandations about other book "similar" to that one.
- - 2 A "Top favorite" graph where the user can select a genre and see the most liked book of the genre
- - 3 A visualisation of the biggest publishers, what genre of book they publish, the cost of their books and how much they are liked.
- - 4 a time table of when the books were published (or first published if the variable exist for the book)
+<!--Here are some ideas of some visualisation that we could do:
+ 1) Just a giant library like we can have on the TV on Netflix but it is on the web for books, alphabeticaly sorted. The idea is that when you select a book, you will get the informations about the book (Title, desciption, cover type, ...) and some recommandations about other book "similar" to that one.
+ 2) A "Top favorite" graph where the user can select a genre and see the most liked book of the genre
+ 3) A visualisation of the biggest publishers, what genre of book they publish, the cost of their books and how much they are liked.
+ 4) A time table of when the books were published (or first published if the variable exist for the book)-->
 
-First sktech drawings of what the main pages could look like:
+<!--First sktech drawings of what the main pages could look like:
 
 <p align="center">
 
@@ -74,7 +70,7 @@ First sktech drawings of what the main pages could look like:
 | :---------------: | :--------------------------------------------------: | :------------------------------------------------------: |
 | <img src="/Images/random_image.jpeg" width="300" > | <img src="/Images/random_image.jpeg" width="300" > | <img src="/Images/random_image.jpeg" width="300" > |
 
-</p>
+</p>-->
 
 ### Exploratory Data Analysis
 
