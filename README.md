@@ -54,7 +54,7 @@ We will also create new variables like the number of words in the title, the len
 This project has two mains purposes. The first one is to implement a book library and a dynamic top favorite list based on the genre. The aim here is for the visitor to be oriented for his next reading :
 * with the top favorite list
 * by clicking on a book that they like in the library
- * where there will be other book recommendations, based on how similar the books' descriptions are 
+  y* where there will be other book recommendations, based on how similar the books' descriptions are 
 
 Then, we will visualise the books market dynamics, to understand better if the external parameters of a book (prize, number of pages, type of cover, publisher, ...) influence its popularity, if a genre tends to have more pages, be more expensive or more popular than others, or if a publisher publish more likable books than others and what genre they publish. 
 
@@ -84,7 +84,7 @@ One can find the detailed procedure of our Exploratory Data Analysis in the [Jup
 In short, we mainly used Pandas to find the distribution of some interesting categorical columns (author, language, genre, publisher, setting).
 We wanted to know if the categories were uniformly spread, or if there were many rarely-used categories and a few common ones. It turns out that the latter is true for every categorical column, though at different amplitudes.
 
-For the publishers, we had noticed that many entries were very very similar but not exactly equal. We call them quasi-duplicates. We tried to do some statistical analysis to show that, but the method nor the results were really conclusive. Still, we gave some examples. This is a problem if we want to make a meaningful visualization later on. This worsens the previously mentioned non-uniform spread of values, too.
+For the publishers, we had noticed that many entries were very very similar but not exactly equal. We call them quasi-duplicates. We tried to do some statistical analysis to show that, but neither the method nor the results were really conclusive. Still, we gave some examples of the issue. This is a problem if we want to make a meaningful visualization later on. This worsens the previously mentioned non-uniform spread of values, too.
 
 For the languages, a large majority of books in the dataset were written in English (42661 books), and only a few thousands of books are available in all the other languages. We'll surely select only English books in our visualization, so that it's easier to make similarity analyses between their descriptions.
 
