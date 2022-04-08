@@ -52,16 +52,17 @@ After a quick inspection of the data, it seems to be qualitative (low amount of 
 We will also create new variables like the number of words in the title, the length of the series, some key words of the description and the number of awards won.
 
 ### Problematic
-This project has two mains purposes. The first one is to implement a book library and a dynamic top favorite list based on the genre. The aim here is for the visitor to be oriented for his next reading :
+This project has two mains purposes. The first one is to implement a nice book library and a dynamic top favorite list based on the genre. The aim is to orient the visitor towards potential future readings. This could be achieved through multiple elements such as:
+* A vast similarity graph library where books are grouped based on their description's similarity
+* A top favorite list
+* Navigation by clicking on a book from the library which leads in turn to other similar books (based on descriptions or genres)
 
-* With the top favorite list
-* By clicking on a book that they like in the library
-  * There will be other book recommendations, based on how similar the books' descriptions are 
+Secondly, we wish to visualise potential books market dynamics. Better understanding what external parameters of a book (such as its prize, number of pages, length of title, type of cover, publisher, number of sequels/prequels...) influence other factors (such as its popularity, ratings, etc...) could be of interest for the readers. Other hypothesis could include: 
+* does a typical genre tend to have more pages / be more expensive / more popular than others?
+* do vastly liked publishers write more of certain genres ?
+* are there tendencies in ratings for books part of a serie ? (for example if the ratings start falling after n^th^ book published)
 
-Then, we will visualise the books market dynamics, to understand better if the external parameters of a book (prize, number of pages, length of title, type of cover, publisher, number of sequels/prequels...) influence its popularity, if a genre tends to have more pages, be more expensive or more popular than others, or if a publisher publishes more likable books than others and what genre they publish. It might also be interesting to check if books parts of series display a tendency in ratings (for example if the ratings start falling after n^th^ book published). 
-
-We are aware that since we will only consider english books, some similarities in the book descriptions in English, may not be reflected in French (and vice-versa), so the recommendations generated may differ from ones generated with French descriptions (or others).
-
+We are aware that, since we will only consider english books, some similarities in the book descriptions in English, may not be reflected in French (and vice-versa), so the recommendations generated may differ from ones generated with French descriptions (or others). The general conclusions of our hypothesis will be biased towards typical english books readers.
 
 <!--Here are some ideas of some visualisation that we could do:
  1) Just a giant library like we can have on the TV on Netflix but it is on the web for books, alphabeticaly sorted. The idea is that when you select a book, you will get the informations about the book (Title, desciption, cover type, ...) and some recommandations about other book "similar" to that one.
