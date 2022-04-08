@@ -11,6 +11,7 @@
 ## Milestone 1 (8th April, 5pm)
 
 For the project, we wanted to talk about a subject that all of us enjoy. After some discussions and research, we decided to do something about books. Indeed, since books have covers, it can lead to good visualisation.
+![Visualisation](img/draft_pages.png)
 
 ### Dataset
 
@@ -113,6 +114,3 @@ Here are some websites that inspire us for our web design. They do not use the s
 * [PlaySuisse](https://www.playsuisse.ch/) - The way the films are shown is instinctive and fluid. It would be very innovative to do so with books. Also, when we put our mouse on a film without clicking on it, we have more infomation that shows, such as the title, the genre and the duration. We can imagine to do the same for the books with the title, the author, the genre and the number of pages.
 * [Whichbook](https://www.whichbook.net/) - In the bottom, under the "Trending books", is the type of visualisation we want. Here also, when you select one of those books, the way it displays informations about that book is what we want to achieve.
 
-## Milestone 2 (6th May, 5pm)
-
-## Milestone 3 (3rd June, 5pm)
