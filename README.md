@@ -46,7 +46,7 @@ The original data has been collected from [GoodReads - Best Books Ever](https://
 | bbeVotes | Number of votes in Best Books Ever list | 100% |
 | price | Book's price (extracted from Iberlibro) | 73% |
 
-After a quick inspection of the data, it seems to be qualitative (low amount of missing data on most important fields, no corrupted data, etc...). It will require some pre-processing though, such as filtering non-english books or grouping them by language and harmonize the publisher names. 
+After a quick inspection of the data, it seems to be qualitative (low amount of missing data on most important fields, no corrupted data, etc...). It will require some pre-processing though, such as filtering non-english books or grouping them by language and harmonize the publisher names, author names... 
 
 We will also create new variables like the number of words in the title, the length of the series, some key words of the description and the number of awards won.
 
