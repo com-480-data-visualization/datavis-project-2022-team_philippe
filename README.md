@@ -10,7 +10,7 @@
 
 ## Milestone 1 (8th April, 5pm)
 
-For the project, we wanted to talk about a subject that all of us enjoy. After some discussions and research, we decided to do something about books. Indeed, since book have covers, it could lead to promising visualisation.
+For the project, we wanted to talk about a subject that all of us enjoy. After some discussions and research, we decided to do something about books. Indeed, since books have covers, it can lead to good visualisation.
 
 ### Dataset
 
