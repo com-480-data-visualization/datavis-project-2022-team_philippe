@@ -94,15 +94,20 @@ We tried seeing if the author had a significant correlation with the book's rati
 
 
 What has been already done with this data:
-
+The "Best Book Dataset" has been used by Stacy Stephanie McDonald for his Master's paper. He used this Dataset to simulate a library dataset as he was developping a Library Managment System. You can see his paper [here](https://cdr.lib.unc.edu/downloads/wd376493v). 
 
 
 Originality of our approach:
 
-Our approach is interesting as it focuses on **TODO**
+Our approach is interesting as it focuses on recommendation based on a similarity measure on the books descriptions. Also, in our website, we don't want to sell books. We want to show them. So the way we will visualize them will be totally different.
 
 
 Sources of inspiration for the project:
+Here are some websites that inspire us for our web design. They do not use the same dataset than us.
+
+[What Should I Read Next?](https://www.whatshouldireadnext.com/) - In this website, the search bar and the way it is showing the recommandations in a list are great;
+[PlaySuisse](https://www.playsuisse.ch/) - The way the films are shown is instinctive and fluid. It would be very inovative to do so with books. Also, when we put our mouse on a film without clicking on it, we have more infomation that shows like the title, the genre and the duration. We can imagine to do the same for the books with the title, the author, the genre and the number of pages.
+[Whichbook](https://www.whichbook.net/) - In the bottom, under the "Trending books", is the type of visualisation we want. Here also, when you select one of those books, the way it displays informations about that book is what we want to achieve.
 
 
 
