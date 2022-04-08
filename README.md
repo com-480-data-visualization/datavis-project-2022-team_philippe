@@ -56,7 +56,7 @@ This project has two mains purposes. The first one is to implement a book librar
 * by clicking on a book that they like in the library
   y* where there will be other book recommendations, based on how similar the books' descriptions are 
 
-Then, we will visualise the books market dynamics, to understand better if the external parameters of a book (prize, number of pages, type of cover, publisher, ...) influence its popularity, if a genre tends to have more pages, be more expensive or more popular than others, or if a publisher publish more likable books than others and what genre they publish. 
+Then, we will visualise the books market dynamics, to understand better if the external parameters of a book (prize, number of pages, type of cover, publisher, ...) influence its popularity, if a genre tends to have more pages, be more expensive or more popular than others, or if a publisher publish more likable books than others and what genre they publish. It might also be interesting to check if books parts of series display a tendency in ratings (for example if the ratings start falling after n_th book published). 
 
 We are aware that since we will only consider english books, some similarities in the book description in english may differ from french so the recommendations generated may differ from our culture.
 
