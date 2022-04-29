@@ -98,7 +98,7 @@ Finally, we checked if there were any obvious correlations between the different
 
 ![Correlation of numerical columns](img/first_numerical_corr.png)
 
-With this picture, we see that we do not have strong correlation in first sight. So there might be little relevant to show graphs about how a variable influence another one.
+With this picture, we see that we do not have strong correlations on first sight. There might be little relevant to show graphs about how a variable influence another as we initially planned. Assessing the correlations would require more in-depth analysis.
 
 ### Related work
 
@@ -112,7 +112,7 @@ Our approach is interesting as it focuses on recommendation based on a similarit
 #### Sources of inspiration for the project:
 Here are some websites that inspire us for our web design. They do not use the same dataset as we.
 
-* [What Should I Read Next?](https://www.whatshouldireadnext.com/) - In this website, the search bar and the way it is showing the recommendations in a list are great;
+* [What Should I Read Next?](https://www.whatshouldireadnext.com/) - In this website, the search bar and the way it is showing the recommendations in a list are great.
 * [PlaySuisse](https://www.playsuisse.ch/) - The way the films are shown is instinctive and fluid. It would be very innovative to do so with books. Also, when we put our mouse on a film without clicking on it, we have more infomation that shows, such as the title, the genre and the duration. We can imagine to do the same for the books with the title, the author, the genre and the number of pages.
 * [Whichbook](https://www.whichbook.net/) - In the bottom, under the "Trending books", is the type of visualisation we want. Here also, when you select one of those books, the way it displays informations about that book is what we want to achieve.
 
