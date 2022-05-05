@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/fullpage.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/perso.css" />
+</head>
+<body>
+    <div id="fullpage">
+        <section class="section">
+            <div class="box">
+                <div class="huge white">Studio Bibli</div>
+                <div class="small white">Guillaume, Roxane, Arnaud</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <span class="medium white">what kind of books do you like?</span>
+        </section>
+
+        <section class="section">
+            <span class="medium">do you like a long book?</span>
+        </section>
+
+        <section class="section">
+            <span class="medium">MAP</span>
+        </section>
+
+        <section class="section">
+            <span class="medium">here are some more stats!</span>
+        </section>
+    </div>
+</body>
+<script type="text/javascript" src="js/fullpage.js"></script>
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        autoScrolling: true,
+        sectionsColor: ['#63474dff', '#aa767cff', '#d6a184ff', '#ffa686ff', '#fec196ff'],
+    });
+</script>

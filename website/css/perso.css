@@ -1,0 +1,29 @@
+.huge {
+  font-size: 10rem;
+  text-align: center;
+  font-family: "Abril Fatface";
+}
+
+.white {
+  color: white;
+}
+
+.medium {
+  font-size: 5rem;
+  text-align: center;
+  font-family: "Aktiv Grotesk", Helvetica, sans-serif;
+}
+
+.small {
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Aktiv Grotesk", Helvetica, sans-serif;
+}
+
+:root {
+  --rose-ebony: #63474dff;
+  --old-rose: #aa767cff;
+  --tumbleweed: #d6a184ff;
+  --light-salmon: #ffa686ff;
+  --macaroni-and-cheese: #fec196ff;
+}
