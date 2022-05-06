@@ -8,6 +8,8 @@
 | Arnaud Gaudard | 269672 |
 | Roxane Pangaud | 283177 |
 
+[Milestone 1](milestones/Milestone1Submission.pdf) • [Milestone 2](milestones/Milestone2Submission.pdf)
+
 ## Milestone 1 (8th April, 5pm)
 
 For the project, we wanted to talk about a subject that all of us enjoy. After some discussions and research, we decided to do something about books. Indeed, since books have covers, it can lead to good visualisation.
