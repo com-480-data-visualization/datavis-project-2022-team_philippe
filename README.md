@@ -10,7 +10,7 @@
 
 [Milestone 1](milestones/Milestone1Submission.pdf) • [Milestone 2](milestones/Milestone2Submission.pdf)
 
-[Website](https://com-480-data-visualization.github.io/datavis-project-2022-team_philippe/website/){:target="_blank"}
+[Website](https://com-480-data-visualization.github.io/datavis-project-2022-team_philippe/website/)
 
 ## Milestone 1 (8th April, 5pm)
 
