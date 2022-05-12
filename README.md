@@ -10,6 +10,8 @@
 
 [Milestone 1](milestones/Milestone1Submission.pdf) • [Milestone 2](milestones/Milestone2Submission.pdf)
 
+[Website](https://com-480-data-visualization.github.io/datavis-project-2022-team_philippe/website/)
+
 ## Milestone 1 (8th April, 5pm)
 
 For the project, we wanted to talk about a subject that all of us enjoy. After some discussions and research, we decided to do something about books. Indeed, since books have covers, it can lead to good visualisation.
