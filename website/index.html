@@ -22,6 +22,10 @@
             <span class="medium white">Tinder page</span>
             <center><img src="./../img/skeleton_graph_3.png" alt="centered image" style="width: 70vw; min-width: 330px;"> </center>
           </div>
+          <div class="slide">
+            <svg id="basicsviz1" class="basicsviz" version="1.1" viewBox="0 0 90 60"
+                      xmlns="http://www.w3.org/2000/svg"></svg>
+          </div>
         </section>
 
         <section class="section">
@@ -71,9 +75,18 @@
         </section>
     </div>
 </body>
+
+
+<!-- Scripts imports -->
+<script src="lib/d3.min.js"></script>
+<script src="js/svg_animations.js"></script>
+<script src="js/example_animation.js"></script>
+
+
 <script type="text/javascript" src="js/fullpage.js"></script>
 <script type="text/javascript">
     var myFullpage = new fullpage('#fullpage', {
+        licenseKey: 'gplv3-license',
         // autoScrolling: true,
         // scrollHorizontally: true,
         navigation: true,
