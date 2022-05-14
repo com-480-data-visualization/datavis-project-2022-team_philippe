@@ -20,6 +20,12 @@
   font-family: "Aktiv Grotesk", Helvetica, sans-serif;
 }
 
+.bubble_graph_text {
+  text-anchor: middle;
+  font-size: 0.75rem;
+  font-family: "Aktiv Grotesk", Helvetica, sans-serif;
+}
+
 /* Fullpage fixes */
 
 /* Move the right arrow from the navigation */
