@@ -20,10 +20,23 @@
   font-family: "Aktiv Grotesk", Helvetica, sans-serif;
 }
 
-:root {
-  --rose-ebony: #63474dff;
-  --old-rose: #aa767cff;
-  --tumbleweed: #d6a184ff;
-  --light-salmon: #ffa686ff;
-  --macaroni-and-cheese: #fec196ff;
+/* Fullpage fixes */
+
+/* Move the right arrow from the navigation */
+.fp-next {
+  right: 55px;
+}
+
+/* Center the slides navigation */
+.fp-slidesNav {
+  text-align: center;
+}
+
+.fp-slidesNav ul {
+  display: inline-block;
+}
+
+/* Make the navigation white like the rest */
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  background: white;
 }
