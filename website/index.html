@@ -27,20 +27,22 @@
         <section class="section">
           <div class="slide">
             <span class="medium white">Philippe asking for preferences</span>
+            <center><img src="./../img/skeleton_graph_4.png" alt="centered image" style="width: 60vw; min-width: 330px;"> </center>
           </div>
           <div class="slide">
             <span class="medium white">How long do you like your books?</span>
-            <center><img src="./../img/skeleton_graph_4.png" alt="centered image" style="width: 60vw; min-width: 330px;"> </center>
+            <svg id="book_size_anim" class="book_size_widget" version="1.1" viewBox="225 125 256 256" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
           </div>
           <div class="slide">
             <span class="medium white">What is your favourite type of cover?</span>
             <svg id="simple_coins_anim" class="simple_coins_widget" version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
-                               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+              xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
           </div>
           <div class="slide">
             <span class="medium white">What is the maximum price you would pay for a book?</span>
             <svg id="coins_anim" class="coins_widget" version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+              xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
           </div>
           <div class="slide">
             <span class="medium white">Philippe hinting to scroll down for recommendations</span>
@@ -76,12 +78,12 @@
     </div>
 </body>
 
-
 <!-- Scripts imports -->
 <script src="lib/d3.min.js"></script>
-<script src="js/coins_widget.js"></script>
-<!-- <script src="js/example_animation.js"></script> -->
 <script src="js/simple_coins_widget.js"></script>
+<script src="js/coins_widget.js"></script>
+<script src="js/book_size_widget.js"></script>
+<!-- <script src="js/example_animation.js"></script> -->
 <script src="js/bubble_graph.js"></script>
 
 
