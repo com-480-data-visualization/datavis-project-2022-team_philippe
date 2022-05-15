@@ -1,6 +1,6 @@
-class BookSizeViz {
-  constructor(svg_amim, money_anim_id) {
-    const svg = d3.selectAll("." + svg_amim);
+class BookSizeClass {
+  constructor(svg_amim_class, svg_anim_id) {
+    const svg = d3.selectAll("." + svg_amim_class);
 
     const background_color = '#aa767c';
 
@@ -102,4 +102,4 @@ class BookSizeViz {
 
 }
 
-const sizebookviz = new BookSizeViz("svg_amim", "money_anim");
+const book_size_widget = new BookSizeClass("book_size_widget", "book_size_anim");

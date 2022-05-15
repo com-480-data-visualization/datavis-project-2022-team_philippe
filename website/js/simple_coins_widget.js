@@ -1,6 +1,6 @@
-class SimpleCoinClass {
-  constructor(svg_amim, anim_id) {
-    const svg = d3.selectAll("." + svg_amim);
+class SimpleCoinsClass {
+  constructor(svg_amim_class, svg_anim_id) {
+    const svg = d3.selectAll("." + svg_amim_class);
 
 /*
     const background_color = '#aa767c';
@@ -27,4 +27,4 @@ class SimpleCoinClass {
 
 }
 
-const simple_coin_widget = new SimpleCoinClass("simple_coin_widget", "simple_money_anim");
+const simple_coins_widget = new SimpleCoinsClass("simple_coins_widget", "simple_coins_anim");
