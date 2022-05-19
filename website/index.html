@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <head>
+    <!-- CSS links -->
     <link rel="stylesheet" type="text/css" href="css/fullpage.min.css" />
     <link rel="stylesheet" type="text/css" href="css/perso.css" />
+    <link rel="stylesheet" type="text/css" href="css/tinder.css" />
+
+    <!-- Webpage Title-->
+    <title>Studio Bibli</title>
+
+    <!-- Meta data - not displayed -->
+    <meta name="author" content="Guillaume Parchet, Roxane Pangaud, Arnaud Gaudard">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
+
 <body>
     <div id="fullpage">
+
+        <!-- Opening Page-->
         <section class="section">
             <div class="box">
                 <div class="huge white">Studio Bibli</div>
@@ -14,41 +28,87 @@
         </section>
 
         <section class="section">
+          <!-- Cat Introduction Page-->
           <div class="slide">
             <span class="medium white">Philippe the librarian explaining</span>
             <center><img src="./../img/skeleton_graph_2.png" alt="centered image" style="width: 55vw; min-width: 330px;"> </center>
           </div>
-          <div class="slide">
-            <span class="medium white">Tinder page</span>
-            <center><img src="./../img/skeleton_graph_3.png" alt="centered image" style="width: 70vw; min-width: 330px;"> </center>
+
+          <!-- Tinder Page-->
+          <div class="slide" id="TinderPage">
+            <div class="tinder">
+              <div class="tinder--status">
+                <i class="fa fa-remove"></i>
+                <i class="fa fa-heart"></i>
+              </div>
+
+              <div class="tinder--cards">
+                <div class="tinder--card">
+                  <img src="https://placeimg.com/600/300/people">
+                  <h3>Demo card 1</h3>
+                  <p>This is a demo for Tinder like swipe cards</p>
+                </div>
+                <div class="tinder--card">
+                  <img src="https://placeimg.com/600/300/animals">
+                  <h3>Demo card 2</h3>
+                  <p>This is a demo for Tinder like swipe cards</p>
+                </div>
+                <div class="tinder--card">
+                  <img src="https://placeimg.com/600/300/nature">
+                  <h3>Demo card 3</h3>
+                  <p>This is a demo for Tinder like swipe cards</p>
+                </div>
+                <div class="tinder--card">
+                  <img src="https://placeimg.com/600/300/tech">
+                  <h3>Demo card 4</h3>
+                  <p>This is a demo for Tinder like swipe cards</p>
+                </div>
+                <div class="tinder--card">
+                  <img src="https://placeimg.com/600/300/arch">
+                  <h3>Demo card 5</h3>
+                  <p>This is a demo for Tinder like swipe cards</p>
+                </div>
+              </div>
+
+              <div class="tinder--buttons">
+                <button id="nope"><i class="fa fa-remove"></i></button>
+                <button id="love"><i class="fa fa-heart"></i></button>
+              </div>
+            </div>
           </div>
         </section>
 
+        <!-- Cat Preferences Pages-->
         <section class="section">
           <div class="slide">
             <span class="medium white">Philippe asking for preferences</span>
             <center><img src="./../img/skeleton_graph_4.png" alt="centered image" style="width: 60vw; min-width: 330px;"> </center>
           </div>
+
           <div class="slide">
             <span class="medium white">How long do you like your books?</span>
             <svg id="book_size_anim" class="book_size_widget" version="1.1" viewBox="225 125 256 256" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
           </div>
+
           <div class="slide">
             <span class="medium white">What is your favourite type of cover?</span>
             <svg id="simple_coins_anim" class="simple_coins_widget" version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
           </div>
+
           <div class="slide">
             <span class="medium white">What is the maximum price you would pay for a book?</span>
             <svg id="coins_anim" class="coins_widget" version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
           </div>
+
           <div class="slide">
             <span class="medium white">Philippe hinting to scroll down for recommendations</span>
           </div>
         </section>
 
+        <!-- Map Pages-->
         <section class="section">
           <div class="slide">
             <span class="medium white">Explanations on the Bubble Map (size, book summary distance, etc...)</span>
@@ -59,10 +119,12 @@
           </div>
         </section>
 
+        <!-- Cat Leran More Page-->
         <section class="section">
             <span class="medium white">Philippe offering more insights on literature</span>
         </section>
 
+        <!-- Graphics Pages-->
         <section class="section">
           <div class="slide">
             <span class="medium">Circular Timeline of published books</span>
@@ -72,6 +134,7 @@
           </div>
         </section>
 
+        <!-- Credits Page-->
         <section class="section">
             <span class="medium">Credits, authors, copyrights</span>
         </section>
@@ -80,11 +143,14 @@
 
 <!-- Scripts imports -->
 <script src="lib/d3.min.js"></script>
+<script src="lib/hammer.min.js"></script>
 <script src="js/simple_coins_widget.js"></script>
 <script src="js/coins_widget.js"></script>
 <script src="js/book_size_widget.js"></script>
 <!-- <script src="js/example_animation.js"></script> -->
 <script src="js/bubble_graph.js"></script>
+<script src="js/tinder.js"></script>
+
 
 
 <script type="text/javascript" src="lib/fullpage.js"></script>
