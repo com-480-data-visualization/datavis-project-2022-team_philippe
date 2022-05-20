@@ -8,8 +8,7 @@ const one_csv_data = `bookId,"title","series","author","rating","description","l
 const data = d3.csvParse(one_csv_data);
 
 //console.log(data);
-console.log(data[0]);
-//console.log(data[0].coverImg);
+//console.log(data[0]);
 
 var TinderImageUrl = data[0].coverImg;
 var TinderImg = document.createElement('img');
@@ -20,16 +19,19 @@ var TinderCardTitle = document.createElement('h3');
 TinderCardTitle.innerHTML = TinderTitle;
 
 var TinderGenres = data[0].genres;
+TinderGenres = TinderGenres.replace("[", "");
+TinderGenres = TinderGenres.replace("]", "");
+TinderGenres = TinderGenres.replaceAll("'", "");
+var TinderGenresArray = TinderGenres.split(",");
+//console.log(TinderGenresArray[0]);
+
 var TinderCardGenre = document.createElement('p');
-TinderCardGenre.innerHTML = TinderGenres;
+TinderCardGenre.innerHTML = TinderGenresArray[0] +","+ TinderGenresArray[1] +","+ TinderGenresArray[2];
+
 
 document.getElementById("TinderCard1").appendChild(TinderImg);
 document.getElementById("TinderCard1").appendChild(TinderCardTitle);
 document.getElementById("TinderCard1").appendChild(TinderCardGenre);
-
-
-//<p>This is a demo for Tinder like swipe cards</p>
-
 
 
 
