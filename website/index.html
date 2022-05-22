@@ -30,7 +30,16 @@
           <div class="flex_img title_text_siding_left"><img src = "./../img/title_text_sidings.png" width = "25%" alt="Title text siding left"/></div>
           <div class="fancy_text main_title white">Studio Bibli</div>
           <div class="flex_img title_text_siding_right"><img src = "./../img/title_text_sidings_flipped.png" width = "80%" alt="Title text siding right"/></div>
-          <div id="btn"><span class="noselect">Open !</span><div id="circle"></div></div>
+          <div id="btn" onclick="navigate_slide_down()"><span class="noselect">Open !</span><div id="circle"></div></div>
+
+          <script>
+            function navigate_slide_down() {
+              window.dispatchEvent(new KeyboardEvent('keydown', {'key': 'down arrow'}));
+              //document.getElementById("btn").dispatchEvent(new KeyboardEvent('keydown', {'key': 'down arrow'}));
+              console.log('Hello');
+              //document.getElementById("demo").style.color = "red";
+            }
+          </script>
 
         </section>
 
