@@ -1,11 +1,9 @@
+
+/* ------------ Texts ------------- */
 .huge {
   font-size: 10rem;
   text-align: center;
   font-family: "Abril Fatface";
-}
-
-.white {
-  color: white;
 }
 
 .medium {
@@ -20,11 +18,34 @@
   font-family: "Aktiv Grotesk", Helvetica, sans-serif;
 }
 
+.main_title {
+  font-size: 12rem;  
+}
+
+.fancy_text {
+  text-align: center;
+  font-family: 'Sacramento', cursive;
+}
+
+/* ------------ Colors ------------- */
+.white {
+  color: white;
+}
+
 .bubble_graph_text {
   text-anchor: middle;
   font-size: 0.75rem;
   font-family: "Aktiv Grotesk", Helvetica, sans-serif;
 }
+
+.background_img {
+  background: url("../../img/opening_page_background_cropped.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 
 /* Fullpage fixes */
 
