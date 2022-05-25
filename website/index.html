@@ -3,6 +3,7 @@
     <!-- CSS links -->
     <link rel="stylesheet" type="text/css" href="css/fullpage.min.css" />
     <link rel="stylesheet" type="text/css" href="css/perso.css" />
+    <link rel="stylesheet" type="text/css" href="css/perso2.css" />
     <link rel="stylesheet" type="text/css" href="css/tinder.css" />
 
     <!-- Webpage Title-->
@@ -27,18 +28,37 @@
         <!-- Opening Page -->
         <section class="section background_img">
 
-          <div class="flex_img title_text_siding_left"><img src = "./../img/title_text_sidings.png" width = "25%" alt="Title text siding left"/></div>
-          <div class="fancy_text main_title white">Studio Bibli</div>
-          <div class="flex_img title_text_siding_right"><img src = "./../img/title_text_sidings_flipped.png" width = "80%" alt="Title text siding right"/></div>
-          <div id="btn" onclick="myFullpage.moveSectionDown();"><span class="noselect">Open !</span><div id="circle"></div></div>
+          <div class="first-slide-container">
+
+            <div class="main-title-container">
+              <img src="../img/title-image-left.png" alt="Title text siding left"/>
+              <div class="fancy-text main-title white">Studio Bibli</div>
+              <img src="../img/title-image-right.png" alt="Title text siding right"/>
+            </div>
+
+            <div class="main-title-call-to-action-container">
+              <div class="main-title-call-to-action" onclick="myFullpage.moveSectionDown();">
+                <span class="text" class="noselect">Open !</span>
+                <div class="circle"></div>
+              </div>
+            </div>
+
+            <div class="main-title-spacer">
+            </div>
+
+          </div>
 
         </section>
 
         <section class="section">
           <!-- Cat Introduction Page-->
           <div class="slide">
-            <span class="medium white">Philippe the librarian explaining</span>
-            <center><img src="./../img/skeleton_graph_2.png" alt="centered image" style="width: 55vw; min-width: 330px;"> </center>
+            <center>
+              <img src="../img/1-fococlipping-standard.png" alt="centered image">
+            </center>
+            <center>
+              <span class="white">PHILIPPE</span>
+            </center>
           </div>
 
           <!-- Tinder Page-->
@@ -50,7 +70,6 @@
               </div>
 
               <div class="tinder--cards" id="TinderCards">
-
               </div>
 
               <div class="tinder--buttons">
