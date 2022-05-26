@@ -89,6 +89,7 @@ initCards();
 allCards.forEach(function (el) {
   var hammertime = new Hammer(el);
 
+  ///////////////// CARD MOVMENT ///////////////////////
   hammertime.on('pan', function (event) {
     el.classList.add('moving');
   });
@@ -107,18 +108,23 @@ allCards.forEach(function (el) {
     event.target.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px) rotate(' + rotate + 'deg)';
   });
 
+  ///////////////// CARD RELEASE /////////////////
   hammertime.on('panend', function (event) {
     el.classList.remove('moving');
     tinderContainer.classList.remove('tinder_love');
     tinderContainer.classList.remove('tinder_nope');
+
 
     var moveOutWidth = document.body.clientWidth;
     var keep = Math.abs(event.deltaX) < 80 || Math.abs(event.velocityX) < 0.5;
 
     event.target.classList.toggle('removed', !keep);
 
+    ////////////////// COMME BACK //////////////////
     if (keep) {
       event.target.style.transform = '';
+
+    ///////////////// VANISH ///////////////////
     } else {
       var endX = Math.max(Math.abs(event.velocityX) * moveOutWidth, moveOutWidth);
       var toX = event.deltaX > 0 ? endX : -endX;
@@ -127,6 +133,12 @@ allCards.forEach(function (el) {
       var xMulti = event.deltaX * 0.03;
       var yMulti = event.deltaY / 80;
       var rotate = xMulti * yMulti;
+
+      if(xMulti>0){
+        console.log("<3");
+      }else {
+        console.log("X");
+      }
 
       event.target.style.transform = 'translate(' + toX + 'px, ' + (toY + event.deltaY) + 'px) rotate(' + rotate + 'deg)';
       initCards();
@@ -144,14 +156,13 @@ function createButtonListener(love) {
     var card = cards[0];
 
     card.classList.add('removed');
-    console.log(card)
 
     if (love) {
       card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
-      console.log(card)
+      console.log("<3")
     } else {
       card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';
-      console.log(card)
+      console.log("X")
     }
 
     initCards();
