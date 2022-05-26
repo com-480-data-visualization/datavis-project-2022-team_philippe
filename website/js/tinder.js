@@ -29,7 +29,7 @@ for (let i=0 ; i<10 ; i++){
 
     // Grenerate a card
     var CardId = "TinderCard"+i;
-    console.log(CardId);
+    //console.log(CardId);
     var TinderCard = document.createElement('div');
     TinderCard.classList.add("tinder--card");
     TinderCard.id = CardId;
@@ -41,7 +41,7 @@ for (let i=0 ; i<10 ; i++){
    TinderImg.src = TinderImageUrl;
    document.getElementById(CardId).appendChild(TinderImg);
 
-   //Display the book title
+   /*//Display the book title
    var TinderTitle = data[i].title;
    var TinderCardTitle = document.createElement('h3');
    TinderCardTitle.innerHTML = TinderTitle;
@@ -57,9 +57,10 @@ for (let i=0 ; i<10 ; i++){
 
    var TinderCardGenre = document.createElement('p');
    TinderCardGenre.innerHTML = TinderGenresArray[0] +","+ TinderGenresArray[1] +","+ TinderGenresArray[2];
-   document.getElementById(CardId).appendChild(TinderCardGenre);
+   document.getElementById(CardId).appendChild(TinderCardGenre);*/
 
 }
+
 
 
 
@@ -143,11 +144,14 @@ function createButtonListener(love) {
     var card = cards[0];
 
     card.classList.add('removed');
+    console.log(card)
 
     if (love) {
       card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
+      console.log(card)
     } else {
       card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';
+      console.log(card)
     }
 
     initCards();
@@ -155,6 +159,7 @@ function createButtonListener(love) {
     event.preventDefault();
   };
 }
+
 
 var nopeListener = createButtonListener(false);
 var loveListener = createButtonListener(true);
