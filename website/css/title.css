@@ -3,18 +3,14 @@
   flex-direction: column;
 }
 
-.main-title-background {
-  background: url("../../img/opening_page_background_cropped.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 .main-title-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.main-title-spacer {
+  height: 15vw;
 }
 
 .main-title-container img {
@@ -99,10 +95,12 @@
             user-select: none;
 }
 
-.main-title-spacer {
-  height: 15vw;
-}
+/* ------------ background ------------- */
 
-.fancy-text {
-  font-family: 'Sacramento', cursive;
+.main-title-background {
+  background: url("../../img/opening_page_background_cropped.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
