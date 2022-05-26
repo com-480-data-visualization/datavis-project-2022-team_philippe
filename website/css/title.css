@@ -3,6 +3,14 @@
   flex-direction: column;
 }
 
+.main-title-background {
+  background: url("../../img/opening_page_background_cropped.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .main-title-container {
   display: flex;
   justify-content: center;
@@ -24,6 +32,8 @@
   align-items: center;
   justify-content: center;
 }
+
+/* ------------ START button ------------- */
 
 .main-title-call-to-action {
   background: #63474D;
@@ -88,8 +98,6 @@
         -ms-user-select: none;
             user-select: none;
 }
-
-
 
 .main-title-spacer {
   height: 15vw;

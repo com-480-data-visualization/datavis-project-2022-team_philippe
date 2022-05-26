@@ -1,0 +1,73 @@
+
+/* ------------ Texts ------------- */
+.huge {
+  font-size: 10rem;
+  text-align: center;
+  font-family: "Abril Fatface";
+}
+
+.medium {
+  font-size: 5rem;
+  text-align: center;
+  font-family: "Aktiv Grotesk", Helvetica, sans-serif;
+}
+
+.small {
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Aktiv Grotesk", Helvetica, sans-serif;
+}
+
+.bubble_graph_text {
+  text-anchor: middle;
+  font-size: 0.75rem;
+  font-family: "Aktiv Grotesk", Helvetica, sans-serif;
+}
+
+/* ------------ Colors ------------- */
+.white {
+  color: white;
+}
+
+/* ------------ Images ------------- */
+
+.flex_img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+.title_text_siding_left {
+  position: absolute;
+  top: 27.5%;
+  left: 31%;
+  transform: translate(-50%, -50%);
+}
+
+.title_text_siding_right {
+  position: absolute;
+  top: 27.5%;
+  left: 78%;
+  transform: translate(-50%, -50%);
+}
+
+/* ------------ Fullpage fixes ------------- */
+
+/* Move the right arrow from the navigation */
+.fp-next {
+  right: 55px;
+}
+
+/* Center the slides navigation */
+.fp-slidesNav {
+  text-align: center;
+}
+
+.fp-slidesNav ul {
+  display: inline-block;
+}
+
+/* Make the navigation white like the rest */
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  background: white;
+}
