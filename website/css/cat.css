@@ -45,3 +45,27 @@
   display: inline-block;
   margin: 0 15%;
 }
+
+.philippe-bulle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+  position: relative;
+  margin: -3%;
+  margin-top: 1%;
+}
+
+.philippe-bulle img {
+  max-height: 25vw;
+  height: auto;
+  margin-right: -3%;
+}
+
+.philippe-bulle-text {
+  position: absolute;
+  top: 40%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+}
