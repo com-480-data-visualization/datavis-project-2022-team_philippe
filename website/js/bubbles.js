@@ -4,13 +4,13 @@ const height = 900;
 const size = Math.min(width, height);
 
 // Data
-fake_csv_data = `id,parent,likeability
-ROOT,,
-Tragedy,ROOT,50
-Comedy,ROOT,30
-Death of the Princess,Tragedy,4
-Hamlet,Tragedy,7
-Great fun,Comedy,9`;
+fake_csv_data = `id,parent,likeability,coverurl,desc
+ROOT,,,,
+Tragedy,ROOT,50,,
+Comedy,ROOT,30,,
+Death of the Princess,Tragedy,4,https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTh29pf1XIlc3W2JArq7BNGfq-QiQYuU7YDkAICXt0X_UpMCltk,This is the death of a princess :OO
+Hamlet,Tragedy,7,https://kbimages1-a.akamaihd.net/695eb39e-9405-4c4b-8267-302344f0f5f7/353/569/90/False/hamlet-15.jpg,To be or not to be...
+Great fun,Comedy,9,https://www.sarasavi.lk/cache/large/product/Great-Fun-With-Grammar-2-9350374382.jpg,ha ha ha haha`;
 
 let raw_data = d3.csvParse(fake_csv_data);
 
@@ -49,7 +49,11 @@ let current_view = [root_data.x, root_data.y, size];  // a view is an array [cen
 let svg_selection = d3.select("#bubbles").append("svg")
   .attr("viewBox", [-width/2 , -height/2, width, height])
   .style("font-family", "Helvetica")
-  .on("click", (event) => zoom(event, root_data));
+  .on("click", (event) => {
+    zoom(event, root_data);
+    event.stopPropagation();
+    remove_tooltip();
+  });
 
 let circles_selection = svg_selection.append("g").selectAll("circle").data(root_data.descendants().slice(1)).join("circle")
   .attr("r", d => d.r)
@@ -60,8 +64,12 @@ let circles_selection = svg_selection.append("g").selectAll("circle").data(root_
   .on("mouseover", function() { d3.select(this).attr("stroke", "hsl(33, 100%, 96%)"); })
   .on("mouseout", function() { d3.select(this).attr("stroke", null); })
   .on("click", (event, d) => {
-    if (focused !== d) {
+    if (focused !== d && d.children) {
       zoom(event, d);
+      event.stopPropagation();
+      remove_tooltip();
+    } else if (focused === d.parent && !d.children) {
+      tooltip(event, d);
       event.stopPropagation();
     }
   });
@@ -78,9 +86,13 @@ let labels_selection = labels_group_selection.selectAll("text").data(root_data.d
   .attr("x", d => d.x)
   .attr("y", d => d.y);
 
+// Tooltip
+let tooltip_selection = d3.select("#bubbles-tooltip").data([{
+  viewed_id: null
+}]);
+
+// Functions
 function zoom(event, d) {
-  console.log(`zoomed to`);
-  console.log(d);
   focused = d;
 
   // Set the zoom transition to take place
@@ -109,6 +121,10 @@ function zoom(event, d) {
           this.style.display = "none";  // `display` cannot be animated :(
         }
       });
+
+  // Allow clicking on books under the focused category, but not others
+  circles_selection.filter(d => !d.children)
+    .attr("pointer-events", d => d.parent === focused ? null : "none");
 }
 
 function set_view(new_view) {
@@ -133,4 +149,44 @@ function set_view(new_view) {
       return `scale(${scal})
       translate(${trans_x}, ${trans_y})`;
     });
+}
+
+function tooltip(event, the_d) {
+  // dinguerie stuff going on here !!!
+  const add_new_tooltip_selection = tooltip_selection
+    .filter(d => d.viewed_id !== the_d.id)
+    .style("opacity", 1);
+
+  const remove_old_tooltip_selection = tooltip_selection
+    .filter(d => d.viewed_id === the_d.id)
+    .style("opacity", 0);
+
+  // Either one of these two above selections should be empty. Now we can change the state at will.
+  add_new_tooltip_selection.each(d => {
+    console.log("showing", the_d.id);
+    d.viewed_id = the_d.id;
+  });
+
+  remove_old_tooltip_selection.each(d => {
+    console.log("unshowing");
+    d.viewed_id = null;
+  });
+
+  // Change state in case of new tooltip
+  add_new_tooltip_selection
+    .select("img")
+      .attr("src", the_d.data.coverurl);
+
+  add_new_tooltip_selection
+    .select("h1")
+      .text(the_d.id);
+
+  add_new_tooltip_selection
+    .select("p")
+      .text(the_d.data.desc);
+}
+
+function remove_tooltip() {
+  tooltip_selection
+    .style("opacity", 0);
 }

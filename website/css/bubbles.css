@@ -7,3 +7,37 @@
   display: block;
   margin: auto;
 }
+
+#bubbles-tooltip {
+  /* Fade-in preparation */
+  opacity: 0;
+  transition: opacity 1s;
+
+  /* Place the tooltip on top of the window */
+  position: absolute;
+  top: 1vh;
+  right: 50vw;
+  transform: translateX(50%);
+
+  background: white;
+  border-radius: 3px;
+
+  display: flex;
+  flex-direction: row;
+
+  font-family: Helvetica;
+}
+
+#bubbles-tooltip img {
+  max-height: 40vh;
+  max-width: 10vw;
+
+  border-radius: 3px;
+  
+  vertical-align: bottom;  /* fix annoying 4px (https://stackoverflow.com/a/46891256) */
+}
+
+#bubbles-tooltip .details {
+  margin-left: 1vw;
+  min-width: 30vw;
+}
