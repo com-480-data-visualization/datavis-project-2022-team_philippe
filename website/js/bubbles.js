@@ -37,7 +37,7 @@ data.each(d => {
 
 // Color
 let color = d3.scaleLinear()  // it is a callable.
-    .domain([0, 5])
+    .domain([0, 5])  // lol there are only two levels °o° i don't need this
     .range(["hsl(16, 100%, 76%)", "hsl(33, 100%, 87%)"])
     .interpolate(d3.interpolateHcl)
 
