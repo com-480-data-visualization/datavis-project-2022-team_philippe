@@ -70,7 +70,7 @@
   position: relative;
   background-color: #E9C100;
   border-radius: 4em;
-  font-size: 16px;
+  font-size: 2vh;
   color: black;
   padding: 0.8em 1.8em;
   cursor:pointer;
@@ -84,7 +84,7 @@
 
 .speech-button:hover {
   transition-duration: 0.1s;
-  background-color: #b39500;
+  background-color: #E9C100;
 }
 
 .speech-button:after {
@@ -98,11 +98,11 @@
   height: 100%;
   opacity: 0;
   transition: all 0.5s;
-  box-shadow: 0 0 10px 40px #b39500;
+  box-shadow: 0 0 10px 40px #E9C100;
 }
 
 .speech-button:active:after {
-  box-shadow: 0 0 0 0 #b39500;
+  box-shadow: 0 0 0 0 #E9C100;
   position: absolute;
   border-radius: 4em;
   left: 0;
