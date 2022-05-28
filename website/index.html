@@ -56,6 +56,7 @@
 
         </section>
 
+        <!-- Cat + Tinder Page -->
         <section class="section">
           <!-- Cat Introduction Page-->
           <div class="slide">
@@ -132,9 +133,19 @@
           </div>
 
           <div class="slide">
-            <span class="medium white">What is your favourite type of cover?</span>
-            <svg id="simple_coins_anim" class="simple_coins_widget" version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+            <span class="text-open-sans-ultrabold medium white" style="margin-bottom: 20vh">What is your favourite type of cover?</span>
+
+            <div class="philippe-centered">
+              <div class="cover-buttons">
+                <i class="fa-solid fa-book-open tinder--buttons fa-10x" style="margin: 5%"></i>
+                <span style="margin-top: 0.25em;" class="text-open-sans-light"><b>Flexible</b></span>
+              </div>
+              <div class="cover-buttons">
+                <i class="fa-solid fa-book tinder--buttons fa-10x" style="margin: 5%"></i>
+                <span style="margin-top: 0.25em;" class="text-open-sans-light"><b>Hard</b></span>
+              </div>
+
+            </div>
           </div>
 
           <div class="slide">
@@ -184,8 +195,16 @@
 
         <!-- Map Pages-->
         <section class="section">
+          <!-- Explanations Page -->
           <div class="slide">
-            <span class="medium white">Explanations on the Bubble Map (size, book summary distance, etc...)</span>
+            <span class="text-open-sans-ultrabold white explanations" style="font-size:3rem">Explanations on the Bubble Map</span>
+            <span class="text-open-sans-light white explanations white">With the informations that you gave to Philippe, he can now show you
+              which books might interest you in the form of a bubble graph. Each bubble represent a genre. The larger the bubble, the
+              more books that match your choices are inside. When you click on a genre bubble, the books in it are zoomed in.
+              This time, the bigger the bubble, the more likely you are to like the book. When you select a book, a window appears
+              and you can see some details about the book, such as its cover, authors and summary.<br> <br>
+              Philippe select the books only based on the preferences you selected, and based on the similarity of the words on
+              the summary of the books. <b class="yellow">EXPLANATION OF THE DISTANCE SIMILARITY TODO</b> (size, book summary distance, etc...)</span>
           </div>
           <div class="slide">
             <!-- <center><img src="./../img/skeleton_graph_5.png" alt="centered image" style="width: 70vw; min-width: 330px;"></center> -->
@@ -242,6 +261,6 @@
         navigation: true,
         slidesNavigation: true,
         loopHorizontal: false,
-        sectionsColor: ['#63474dff', '#aa767cff', '#d6a184ff', '#ffa686ff', '#fec196ff', '#ffecc2ff', '#fff9ebff'],
+        sectionsColor: ['#63474dff', '#aa767cff', '#d6a184ff', '#aa767cff', '#fec196ff', '#ffecc2ff', '#fff9ebff'],
     });
 </script>
