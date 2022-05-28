@@ -1,13 +1,7 @@
-*, *:before, *:after {
+.tinder *, .tinder *:before, .tinder *:after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-body {
-  background: #CCFBFE;
-  overflow: hidden;
-  font-family: sans-serif;
 }
 
 .tinder {
