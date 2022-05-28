@@ -14,22 +14,17 @@
   width: auto;
   height: auto;
   max-height: 3vh;
-  margin-left: auto;
-  margin-right: auto;
-  display: inline-block;
-  position:relative;
-  bottom:150px;
-  left:150px;
 }
 
  .philippe-name {
-  font-size: 3vw;
+  font-size: 3vh;
   justify-content: center;
   font-family: "Aktiv Grotesk", Helvetica, sans-serif;
   color: white;
   font-weight: bold;
   display: flex;
   margin-top: -1%;
+  transform: translate(-3.5%, -0%);
   /*margin-bottom: 3%;*/
 }
 
@@ -56,7 +51,7 @@
 }
 
 .philippe-bulle img {
-  max-height: 15vw;
+  max-height: 40vh;
   height: auto;
   margin-right: -3%;
 }
@@ -66,6 +61,7 @@
   top: 43%;
   left: 50%;
   transform: translate(-43%, -50%);
+  font-size: 8vh;
 }
 
 /* ---------- Cat speech button styling ---------- */
