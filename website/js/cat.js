@@ -1,5 +1,5 @@
-var next = document.getElementById('next');
-var text = document.getElementById('bulle-text');
+var next = document.getElementById('intro-next');
+var text = document.getElementById('intro-bulle-text');
 
 var i=0;
 

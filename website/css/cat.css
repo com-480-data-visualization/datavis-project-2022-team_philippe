@@ -22,12 +22,14 @@
 }
 
  .philippe-name span {
-  font-size: 3rem;
+  font-size: 3vw;
   justify-content: center;
   font-family: "Aktiv Grotesk", Helvetica, sans-serif;
   color: white;
   font-weight: bold;
   display: flex;
+  margin-top: -1%;
+  /*margin-bottom: 3%;*/
 }
 
 .philippe-buttons {
@@ -46,15 +48,26 @@
   margin: 0 15%;
 }
 
+.philippe-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+  margin: -3%;
+  margin-top: 1%;
+  position: relative;
+}
+
 .philippe-bulle {
   display: flex;
   justify-content: center;
   align-items: center;
   height: auto;
   width: auto;
-  position: relative;
   margin: -3%;
   margin-top: 1%;
+  position: relative;
 }
 
 .philippe-bulle img {
@@ -65,7 +78,7 @@
 
 .philippe-bulle-text {
   position: absolute;
-  top: 40%;
-  left: 47%;
-  transform: translate(-50%, -50%);
+  top: 43%;
+  left: 50%;
+  transform: translate(-43%, -50%);
 }
