@@ -2,13 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="76.60981mm"
+   height="76.256752mm"
+   viewBox="0 0 76.60981 76.256752"
    version="1.1"
    id="svg5"
    xml:space="preserve"
-   sodipodi:docname="Nouveau document 1.2022_05_26_14_33_34.0.svg"
+   sodipodi:docname="facing_coin.svg"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.72515432"
-     inkscape:cx="544.71164"
-     inkscape:cy="417.15259"
+     inkscape:cx="296.48862"
+     inkscape:cy="130.31709"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
@@ -44,7 +44,8 @@
          ry="38.128376" /></clipPath></defs><g
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
-     id="layer1"><g
+     id="layer1"
+     transform="translate(-64.826096,-105.32611)"><g
        id="g470"
        clip-path="url(#clipPath232)"
        transform="translate(-24.081077,-16.054054)"><path

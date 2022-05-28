@@ -2,17 +2,42 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="76.763733mm"
+   height="17.829599mm"
+   viewBox="0 0 76.763733 17.829599"
    version="1.1"
    id="svg14938"
+   sodipodi:docname="side_coin.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview9"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.72515432"
+     inkscape:cx="144.79677"
+     inkscape:cy="-76.535433"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg14938" />
   <defs
      id="defs14935" />
   <g
-     id="layer1">
+     id="layer1"
+     transform="translate(-66.618134,-139.5852)">
     <rect
        style="fill:#ffc850;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.756534;stroke-linejoin:round;paint-order:stroke markers fill"
        id="rect9944"
