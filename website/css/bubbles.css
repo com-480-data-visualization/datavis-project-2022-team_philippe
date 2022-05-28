@@ -1,0 +1,8 @@
+#bubbles svg {
+  /* Fit the SVG + Avoid that the SVG gets under the navigation */
+  max-height: calc(100vh - 20px - 32px);  /* Pixels are bad, but the fullpage navigation is declared in pixels :( */
+
+  /* Center the SVG */
+  display: block;
+  margin: auto;
+}
