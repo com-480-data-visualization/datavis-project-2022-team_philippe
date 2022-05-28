@@ -22,6 +22,16 @@
   font-family: 'Sacramento', cursive;
 }
 
+.text-open-sans {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300
+}
+
+.text-open-sans-ultrabold {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800
+}
+
 .bubble_graph_text {
   text-anchor: middle;
   font-size: 0.75rem;
@@ -105,7 +115,6 @@
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
   background: white;
 }
-
 
 /* ------------ Coin widget layouts ------------- */
 
