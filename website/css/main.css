@@ -44,23 +44,25 @@
 /* ------------ Coin WIP ------------- */
 
 .coins-slide-container {
-  position: relative;
   display: flex;
+  flex-direction: column;
 }
 
 .coins-widget {
-  /*position: absolute;*/
   position: relative;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
 }
 
 .coins-widget img {
-  max-height: 25vw;
+  max-height: 3vh;
 }
 
-.ghost-coin {
+.face-coin-widget img {
+  max-height: 15vh;
+}
+
+.ghost-elem {
   opacity: 0;
 }
 
@@ -75,8 +77,6 @@
   opacity: 0;
   transition: visibility 0s linear 800ms, opacity 800ms;
 }
-
-
 
 /* ---------- Useful Button styling ---------- */
 
