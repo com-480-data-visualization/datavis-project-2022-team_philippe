@@ -12,8 +12,11 @@ function callback_next(event){
       break;
     case 2:
       text.innerHTML  = `First, tell me about <br> what books you like!`;
+      break;
     case 3:
       text.innerHTML  = `Swipe right! <br> <i class="fa-solid fa-arrow-right-long"></i>`;
+      i=0;
+      break;
   }
   //event.preventDefault();
 }
