@@ -2,7 +2,7 @@
 const reveal_button = document.getElementById("thug-button");
 const hide_button = document.getElementById("also-thug-button");
 
-const MAX_NB_COINS = 4
+const MAX_NB_COINS = 6
 const CSS_ANIM_DURATION = 800;
 var nb_displayed_coins = 0
 
