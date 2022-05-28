@@ -40,25 +40,6 @@ for (let i=0 ; i<10 ; i++){
    var TinderImg = document.createElement('img');
    TinderImg.src = TinderImageUrl;
    document.getElementById(CardId).appendChild(TinderImg);
-
-   /*//Display the book title
-   var TinderTitle = data[i].title;
-   var TinderCardTitle = document.createElement('h3');
-   TinderCardTitle.innerHTML = TinderTitle;
-   document.getElementById(CardId).appendChild(TinderCardTitle);
-
-   //Display the 3 first genres
-   var TinderGenres = data[i].genres;
-   TinderGenres = TinderGenres.replace("[", "");
-   TinderGenres = TinderGenres.replace("]", "");
-   TinderGenres = TinderGenres.replaceAll("'", "");
-   var TinderGenresArray = TinderGenres.split(",");
-   console.log(TinderGenresArray[0]);
-
-   var TinderCardGenre = document.createElement('p');
-   TinderCardGenre.innerHTML = TinderGenresArray[0] +","+ TinderGenresArray[1] +","+ TinderGenresArray[2];
-   document.getElementById(CardId).appendChild(TinderCardGenre);*/
-
 }
 
 

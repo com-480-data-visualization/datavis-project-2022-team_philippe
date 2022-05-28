@@ -28,17 +28,6 @@
   /*margin-bottom: 3%;*/
 }
 
-.philippe-dialog {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  width: auto;
-  margin: -3%;
-  margin-top: 1%;
-  position: relative;
-}
-
 .philippe-bulle {
   display: flex;
   justify-content: center;
@@ -56,12 +45,11 @@
   margin-right: -3%;
 }
 
-.philippe-bulle-text {
+.dialog-top-mid-position {
   position: absolute;
   top: 43%;
   left: 50%;
   transform: translate(-43%, -50%);
-  font-size: 8vh;
 }
 
 /* ---------- Cat speech button styling ---------- */
