@@ -1,6 +1,7 @@
 // Layout
-const width = 600;
-const height = width;
+const width = 1600;
+const height = 900;
+const size = Math.min(width, height);
 
 // Data
 fake_csv_data = `id,parent,likeability
@@ -30,7 +31,7 @@ const original_center_x = root_data.x;
 const original_center_y = root_data.y;
 
 data.each(d => {
-  d.x = d.x - original_center_x;  // recenter the graph
+  d.x = d.x - original_center_x;  // recenter the graph, otherwise it's coordinates hell.
   d.y = d.y - original_center_y;
 })
 
@@ -42,7 +43,7 @@ let color = d3.scaleLinear()  // it is a callable.
 
 // Dynamic
 let focused = root_data;  // focus is the focused node's joined data. root_data = the root node's data, so we focus the root node for now
-let current_view = [root_data.x, root_data.y, width];  // a view is an array [center_x, center_y, size]
+let current_view = [root_data.x, root_data.y, size];  // a view is an array [center_x, center_y, size]
 
 // DOM nodes selections
 let svg_selection = d3.select("#bubbles").append("svg")
@@ -56,7 +57,7 @@ let circles_selection = svg_selection.append("g").selectAll("circle").data(root_
   .attr("cy", d => d.y)
   .attr("fill", d => color(d.depth))
   .attr("pointer-events", d => !d.children ? "none" : null)
-  .on("mouseover", function() { d3.select(this).attr("stroke", "#000"); })
+  .on("mouseover", function() { d3.select(this).attr("stroke", "hsl(33, 100%, 96%)"); })
   .on("mouseout", function() { d3.select(this).attr("stroke", null); })
   .on("click", (event, d) => {
     if (focused !== d) {
@@ -117,7 +118,7 @@ function set_view(new_view) {
   const new_center_y = new_view[1];
   const new_size = new_view[2];
 
-  const scal = (width / new_size);
+  const scal = (size / new_size);
   const trans_x = -new_center_x;
   const trans_y = -new_center_y;
 
