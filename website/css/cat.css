@@ -5,10 +5,15 @@
 }
 
 .philippe-centered img {
+  display: block;
   max-height: 35vh;
   height: auto;
-  display: block;
 }​
+
+.philippe-bigger img {
+  max-height: 40vh;
+  height: auto;
+}
 
 .philippe-name {
   width: auto;
@@ -24,7 +29,7 @@
   font-weight: bold;
   display: flex;
   margin-top: -1%;
-  transform: translate(-3.5%, -0%);
+  transform: translate(-3.5%, 0%);
   /*margin-bottom: 3%;*/
 }
 
@@ -49,7 +54,7 @@
   position: absolute;
   top: 43%;
   left: 50%;
-  transform: translate(-43%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 /* ---------- Cat speech button styling ---------- */
@@ -68,6 +73,7 @@
   cursor: pointer;
   transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s; /* Safari */
+  transform: translate(10%, 100%);
 }
 
 .speech-button:hover {
