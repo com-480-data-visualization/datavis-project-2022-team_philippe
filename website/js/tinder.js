@@ -20,7 +20,7 @@ const ten_csv_data = `bookId,"title","series","author","rating","description","l
 18405.Gone_with_the_Wind,"Gone with the Wind","","Margaret Mitchell","4.30","Scarlett O'Hara, the beautiful, spoiled daughter of a well-to-do Georgia plantation owner, must use every means at her disposal to claw her way out of the poverty she finds herself in after Sherman's March to the Sea.","English","9780446675536","['Classics', 'Historical Fiction', 'Fiction', 'Romance', 'Historical', 'War', 'Literature', 'Civil War', 'Historical Romance', 'Novels']","[""Scarlett O'Hara"", 'Rhett Butler', 'Ashley Wilkes', 'Melanie Hamilton Wilkes', 'Wade Hampton Hamilton', 'Ella Lorena Kennedy', 'Eugenie Victoria ""Bonnie Blue"" Butler', 'Beau Wilkes', 'India Wilkes', 'Honey Wilkes', 'John  Wilkes', ""Gerald O'Hara"", ""Ellen O'Hara"", ""Suellen O'Hara"", ""Carreen O'Hara"", 'Eulalie', 'Pauline', 'Mammy Abigail', 'Prissy', 'Pork', 'Dilcey', 'Charles Hamilton', 'Frank Kennedy', 'Belle Watling', 'Jonas Wilkerson', 'Emmie Slattery', 'Will Benteen', 'Aunt Pittypat Hamilton', 'Uncle Peter']","Mass Market Paperback","","1037","Warner Books","04/01/99","06/30/36","['Pulitzer Prize for Novel (1937)', 'National Book Award for Novel (1936)']","1074620","['602138', '275517', '133535', '39008', '24422']","94","['Atlanta, Georgia (United States)']","https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1551144577l/18405._SY475_.jpg","1087732","11211",5.58`;
 
 // Transform data to object
-const data = d3.csvParse(ten_csv_data);
+const tinder_data = d3.csvParse(ten_csv_data);
 
 //console.log(data);
 //console.log(data[0]);
@@ -36,7 +36,7 @@ for (let i=0 ; i<10 ; i++){
     document.getElementById("TinderCards").appendChild(TinderCard);
 
    //Display the image
-   var TinderImageUrl = data[i].coverImg;
+   var TinderImageUrl = tinder_data[i].coverImg;
    var TinderImg = document.createElement('img');
    TinderImg.src = TinderImageUrl;
    document.getElementById(CardId).appendChild(TinderImg);
