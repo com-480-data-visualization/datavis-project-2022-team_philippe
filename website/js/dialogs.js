@@ -16,6 +16,6 @@ button_l2_s1.addEventListener('click', function() {current_txt_l2_s1+=1; dialog_
 
 const button_l2_s5 = document.getElementById('speech-button-l2-s5');
 const dialog_l2_s5 = document.getElementById('dialog_l2_s5');
-const texts_l2_s5 = [`With this in mind...`, `Let's look at your<br>bubble book! &nbsp; <i class="fa-solid fa-arrow-down yellow" onclick="myFullpage.moveSlideDown();"></i>`];
+const texts_l2_s5 = [`With this in mind...`, `Let's look at your<br>bubble book! &nbsp; <i class="fa-solid fa-arrow-down yellow" onclick="myFullpage.moveSectionDown();"></i>`];
 var current_txt_l2_s5=0;
 button_l2_s5.addEventListener('click', function() {dialog_l2_s5.innerHTML=texts_l2_s5[current_txt_l2_s5%texts_l2_s5.length]; current_txt_l2_s5+=1;});
