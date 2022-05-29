@@ -1,0 +1,5 @@
+#book-size svg {
+  /* Center the SVG */
+  display: block;
+  margin: auto;
+}
