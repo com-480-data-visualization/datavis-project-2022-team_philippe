@@ -3,7 +3,7 @@ const width = 1600;
 const height = 900;
 const size = Math.min(width, height);
 
-d3.csv("/data/degueu.csv").then(raw_data => {
+d3.csv("../data/degueu.csv").then(raw_data => {
   // Data
   let data = d3.stratify()  // from here on, `data` contains stuff with the d3 format.
     .id(raw_d => raw_d.id)
