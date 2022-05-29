@@ -23,7 +23,7 @@
   position: absolute;
   top: 50%;
   margin-top: -30px;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   text-align: center;
   pointer-events: none;
@@ -49,6 +49,37 @@
   transform: scale(1);
 }
 
+.tinder--swipe {
+  position: absolute;
+  z-index: 1;
+  justify-content: center;
+  text-align: center;
+  top: 40%;
+  width: 100%;
+}
+
+.tinder--swipe-box {
+  position: relative;
+  z-index: 1;
+  font-size: 3vw;
+  background-color: white;
+  border-radius: 10%;
+  margin: auto;
+  width: 15vw;
+  padding-bottom: 1%;
+  padding-top: 3%;
+}
+
+.tinder--swipe-button {
+   margin: 1vw;
+   font-size: 4vw;
+   cursor: pointer;
+   color: white;
+   background-color: #63474D;
+   border-radius: 40%;
+   padding: 6%;
+}
+
 .tinder--cards {
   flex-grow: 1;
   padding-top: 40px;
@@ -56,7 +87,6 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  z-index: 2;
 }
 
 .tinder--card {
@@ -74,6 +104,7 @@
   cursor: -webkit-grab;
   cursor: -moz-grab;
   cursor: grab;
+  z-index:2;
 }
 
 .moving.tinder--card {
@@ -104,30 +135,33 @@
   pointer-events: none;
 }
 
-.tinder--buttons {
+.tinder--buttons-div {
   flex: 0.05 0 100px;
   text-align: center;
   padding-top: 20px;
 }
 
-.tinder--buttons button {
+.tinder--buttons {
+  position: relative;
+  background-color: #FFFFFF;
   border-radius: 50%;
-  line-height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   border: 0;
-  background: #FFFFFF;
   display: inline-block;
-  cursor:pointer;
+  cursor: pointer;
   transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  margin: 0 15%;
+  -webkit-transition-duration: 0.4s;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-top: 9px;
 }
 
-.tinder--buttons button:focus {
+.tinder--buttons:focus {
   outline: 0;
 }
 
-.tinder--buttons button:hover {
+.tinder--buttons:hover {
   transition-duration: 0.1s;
   opacity: 0.5;
 }

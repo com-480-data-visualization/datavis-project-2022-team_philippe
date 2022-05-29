@@ -93,10 +93,24 @@
                 <div class="tinder--cards" id="TinderCards">
                 </div>
 
-                <div class="tinder--buttons">
-                  <button id="nope"><i class="fa fa-remove"></i></button>
-                  <button id="love"><i class="fa fa-heart"></i></button>
+                <div class="tinder--buttons-div">
+                  <div id="nope" class="tinder--buttons">
+                    <i class="fa fa-remove"></i>
+                  </div>
+                  <div id="love" class="tinder--buttons">
+                    <i class="fa fa-heart"></i>
+                  </div>
                 </div>
+
+                <div class="tinder--swipe">
+                  <div class="tinder--swipe-box">
+                    <span>
+                      <span class="text-open-sans-light">Swipe!</span><br>
+                      <i class="fa-solid fa-arrow-down tinder--swipe-button" onclick="myFullpage.moveSectionDown();"></i>
+                    </span>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -187,6 +201,7 @@
                     </span>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -257,7 +272,10 @@
                     <img src=""/>
                 </div>
                 <div class="details">
-                    <h1></h1>
+                    <div class="topbar">
+                        <span class="title"></span>
+                        <span class="x"><i class="fa fa-times"></i></span>
+                    </div>
                     <p></p>
                 </div>
             </div>

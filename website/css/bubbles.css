@@ -33,11 +33,31 @@
   max-width: 10vw;
 
   border-radius: 3px;
-  
+
   vertical-align: bottom;  /* fix annoying 4px (https://stackoverflow.com/a/46891256) */
 }
 
 #bubbles-tooltip .details {
-  margin-left: 1vw;
+  margin: 1vw;
+
   min-width: 30vw;
+  max-width: 70vw;
+
+  text-align: justify;
+}
+
+#bubbles-tooltip .title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#bubbles-tooltip .x {
+  font-size: 2rem;
+  margin-left: 1vw;
+}
+
+#bubbles-tooltip .details .topbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

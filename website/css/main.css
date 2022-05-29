@@ -46,6 +46,10 @@
  color: #E9C100;
 }
 
+.dark-purple {
+  color: #63474D;
+}
+
 /* ------------ Images ------------- */
 
 .flex_img {
@@ -143,49 +147,6 @@
 
 
 /* ------------ Cover buttons layouts ------------- */
-.cover-buttons {
-  border-radius: 10%;
-  background: #FFFFFF;
-  padding-bottom: 1%;
-  margin-right: 5%;
-  margin-left: 5%;
-  cursor:pointer;
-  transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  margin: 0 15%;
-  border: 0;
-  display: inline-block;
-}
-
-/* ------------ Cover grid layouts -------------
-
-.cover-topcell { grid-area: top; }
-.cover-leftcell { grid-area: left; }
-.cover-upleftcell { grid-area: upleft; }
-.cover-uprightcell { grid-area: upright; }
-.cover-downleftcell { grid-area: downleft; }
-.cover-downrightcell { grid-area: downright; }
-.cover-rightcell { grid-area: right; }
-.cover-bottomcell { grid-area: bot; }
-
-.cover-grid-container {
-  display: grid;
-  grid-template-areas:
-    'top top top top top top top top'
-    'left left upleft upleft upright upright right right'
-    'left left upleft upleft upright upright right right'
-    'left left downleft downleft downright downright right right'
-    'left left downleft downleft downright downright right right'
-    'bot bot bot bot bot bot bot bot';
-  gap: 10px;
-  padding: 10px;
-  width: 100vw;
-  height: 100vh;
-}
-
-.grid-container > div {
-  position: relative;
-}*/
 
 .cover-hugediv{
   position: relative;
