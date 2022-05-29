@@ -229,12 +229,18 @@
   box-shadow: -2px -2px 5px rgba(255, 255, 255, 1),
               3px 3px 5px rgba(0, 0, 0, 0.1);
   margin: 5px;
+  padding: 0.5vw;
   line-height: 25px;
   transition: .5s ease;
 }
 
 .cover-div-div i {
-  font-size: 10vh;
+  font-size: 10vw;
+}
+
+.cover-button-font {
+  font-size: 3vw;
+  margin: 1%;
 }
 
 .cover-div input {
