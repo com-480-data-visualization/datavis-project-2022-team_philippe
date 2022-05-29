@@ -56,7 +56,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  z-index: 1;
+  z-index: 2;
 }
 
 .tinder--card {
@@ -84,7 +84,7 @@
 }
 
 .tinder--card img {
-  margin-top: 30px;
+  margin-top: 5%;
   max-width: 100%;
   max-height: 100%;
   pointer-events: none;
