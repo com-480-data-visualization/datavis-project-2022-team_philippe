@@ -1,4 +1,4 @@
-// Layout
+/*// Layout
 const width = 1600;
 const height = 900;
 const size = Math.min(width, height);
@@ -257,4 +257,4 @@ d3.csv("../data/degueu.csv").then(raw_data => {
       d.viewed_id = null;
     });
   }
-});
+});*/
