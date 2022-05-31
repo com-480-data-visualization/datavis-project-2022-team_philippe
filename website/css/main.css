@@ -7,9 +7,17 @@
   font-family: "Aktiv Grotesk", Helvetica, sans-serif;
 }
 
+.text-centered {
+  text-align: center
+}
+
 .dialog-text {
   font-size: 8vh;
   text-align: center;
+}
+
+.footer-text-size {
+  font-size: 1vw;
 }
 
 .fancy-text {
@@ -40,6 +48,10 @@
 /* ------------ Colors ------------- */
 .white {
   color: white;
+}
+
+.black {
+  color: black;
 }
 
 .yellow {
