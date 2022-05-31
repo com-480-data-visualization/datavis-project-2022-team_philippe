@@ -5,7 +5,6 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-
 // Copy paste of tinder_books.csv
 const csv_data = `bookId,coverImg
 2767052-the-hunger-games,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1586722975l/2767052.jpg
@@ -72,12 +71,6 @@ $.ajax({
 // url="https://github.com/com-480-data-visualization/datavis-project-2022-team_philippe/blob/8b84a52b56336569ba6bbdaa528d2fae74f91cbc/data/tinder_books.csv"
 
 
-//console.log(data);
-
-
-//console.log(data);
-//console.log(data[0]);
-
 var tinder_response_array = new Array(tinder_data.length).fill(0);
 var tinder_index = 0;
 
@@ -85,7 +78,6 @@ for (let i=0 ; i<tinder_data.length ; i++){
 
     // Grenerate a card
     var CardId = "TinderCard"+i;
-    //console.log(CardId);
     var TinderCard = document.createElement('div');
     TinderCard.classList.add("tinder--card");
     TinderCard.id = CardId;
@@ -99,9 +91,6 @@ for (let i=0 ; i<tinder_data.length ; i++){
    //TinderImg.style.height = "auto";
    document.getElementById(CardId).appendChild(TinderImg);
 }
-
-
-
 
 //////////////////////////////////////////////////////////// Tinder card Code
 'use strict';
@@ -176,11 +165,9 @@ allCards.forEach(function (el) {
       if(xMulti>0){
         tinder_response_array[tinder_index] = 1;
         tinder_index += 1;
-        console.log("<3");
       }else {
         tinder_response_array[tinder_index] = -1;
         tinder_index += 1;
-        console.log("X");
       }
 
       event.target.style.transform = 'translate(' + toX + 'px, ' + (toY + event.deltaY) + 'px) rotate(' + rotate + 'deg)';
@@ -204,13 +191,10 @@ function createButtonListener(love) {
       card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
       tinder_response_array[tinder_index] = 1;
       tinder_index += 1;
-      console.log("<3");
     } else {
       card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';
       tinder_response_array[tinder_index] = -1;
       tinder_index += 1;
-      console.log("X");
-      console.log(tinder_response_array);
     }
 
     initCards();

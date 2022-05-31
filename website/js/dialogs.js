@@ -1,5 +1,9 @@
 
-// ============================== Dialog animations of cat Philippe ===================================
+////////////////////////////////////////////////////////////////////////////////
+//
+// JavaScript code for the dialog animations of Philippe the librarian
+//
+////////////////////////////////////////////////////////////////////////////////
 
 const button_l1_s1 = document.getElementById('speech-button-l1-s1');
 const dialog_l1_s1 = document.getElementById('dialog_l1_s1');

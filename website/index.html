@@ -260,14 +260,16 @@
         <section class="section">
           <!-- Explanations Page -->
           <div class="slide">
-            <span class="text-open-sans-ultrabold white explanations" style="font-size:3rem">Explanations on the Bubble Map</span>
-            <span class="text-open-sans-light white explanations white">With the informations that you gave to Philippe, he can now show you
-              which books might interest you in the form of a bubble graph. Each bubble represent a genre. The larger the bubble, the
-              more books that match your choices are inside. When you click on a genre bubble, the books in it are zoomed in.
-              This time, the bigger the bubble, the more likely you are to like the book. When you select a book, a window appears
-              and you can see some details about the book, such as its cover, authors and summary.<br> <br>
-              Philippe select the books only based on the preferences you selected, and based on the similarity of the words on
-              the summary of the books. <b class="yellow">EXPLANATION OF THE DISTANCE SIMILARITY TODO</b> (size, book summary distance, etc...)</span>
+            <span class="text-open-sans-ultrabold white explanations" style="font-size:3rem">Navigating the Bubble Graph</span>
+            <span class="text-open-sans-light white explanations white">Using the informations that you gave to Philippe, he is now able to show you
+              books that may arise your interest! To prevent recommending only mainstream content, he created this bubble graph for you to navigate: <br>
+              • Genres-layer: each top-layer bubble represents a genre. The larger the bubble, the more books are inside.<br>
+              • Book-layer: Clicking on a genre bubble will zoom you into it and allow you to get a bigger pictures of the books present.
+              This time, the bigger the bubble, the more likely it is similar to books you matched in on your Tinder page!<br>
+              • Window-layer: A title seems appealing? Just click the particular book bubble to display all detailed information about it!
+              Cover, summary, price... nothing can escape you!
+              <!--<br> <br> Philippe select the books only based on the preferences you selected, and based on the similarity of the words on
+              the summary of the books. <b class="yellow">EXPLANATION OF THE DISTANCE SIMILARITY TODO</b> (size, book summary distance, etc...)</span>-->
           </div>
           <div class="slide">
             <!-- <center><img src="./../img/skeleton_graph_5.png" alt="centered image" style="width: 70vw; min-width: 330px;"></center> -->
@@ -312,7 +314,6 @@
 <!-- Scripts imports -->
 <script src="lib/d3.js"></script>
 <script src="lib/hammer.min.js"></script>
-<script src="js/simple_coins_widget.js"></script>
 <script src="js/coins_widget.js"></script>
 <script src="js/book-size.js"></script>
 <script src="js/bubbles.js"></script>
