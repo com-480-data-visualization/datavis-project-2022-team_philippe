@@ -98,7 +98,7 @@
 /* ------------ background ------------- */
 
 .main-title-background {
-  background: url("../../img/opening_page_background_cropped.jpg") no-repeat center center fixed;
+  background: url("../img/opening_page_background_cropped.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
