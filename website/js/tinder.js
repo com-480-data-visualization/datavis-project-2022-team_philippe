@@ -6,7 +6,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 // Copy paste of tinder_books.csv
-const csv_data = `bookId,coverImg
+const csv_data = d3.csv("../data/tinder_books.csv");
+console.log(csv_data);
+/*
+ `bookId,coverImg
 2767052-the-hunger-games,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1586722975l/2767052.jpg
 2.Harry_Potter_and_the_Order_of_the_Phoenix,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546910265l/2.jpg
 2657.To_Kill_a_Mockingbird,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553383690l/2657.jpg
@@ -36,10 +39,11 @@ const csv_data = `bookId,coverImg
 22034.The_Godfather,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1394988109l/22034._SY475_.jpg
 830502.It,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1334416842l/830502.jpg
 1845.Into_the_Wild,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1403173986l/1845.jpg
-33.The_Lord_of_the_Rings,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1566425108l/33.jpg`
+33.The_Lord_of_the_Rings,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1566425108l/33.jpg`*/
 
 // Transform data to object
 const tinder_data = d3.csvParse(csv_data);
+console.log(tinder_data);
 
 /* TRY TO LOAD the csv but failure...
 $.ajax({
