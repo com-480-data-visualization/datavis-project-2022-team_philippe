@@ -5,7 +5,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-const data_promise = d3.xml("../img/book.svg");
+const data_promise = d3.xml("./img/book.svg");
 
 const middle_part_half_height = 31.153/2;  // snooped on the svg.
 let top_selection; // will be set after promise is fulfilled. damn async that forces me to do global mutable state :'(

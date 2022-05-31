@@ -6,7 +6,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 // Copy paste of tinder_books.csv
-const csv_data = d3.csv("../data/tinder_books.csv");
+const csv_data = d3.csv("./data/tinder_books.csv");
 console.log(csv_data);
 /*
  `bookId,coverImg
@@ -47,7 +47,7 @@ console.log(tinder_data);
 
 /* TRY TO LOAD the csv but failure...
 $.ajax({
-  url: "../data/tinder_books.csv",
+  url: "./data/tinder_books.csv",
   type: 'get',
     dataType: 'text',
     success: function(data) {
