@@ -7,7 +7,7 @@
 
 d3.csv("./data/tinder_books.csv").then(tinder_data => {
 
-  var tinder_response_array = new Array(tinder_data.length).fill(0);
+  var tinder_response_array = [];
   var tinder_index = 0;
 
   for (let i=0 ; i<tinder_data.length ; i++){
@@ -23,9 +23,10 @@ d3.csv("./data/tinder_books.csv").then(tinder_data => {
      var TinderImageUrl = tinder_data[i].coverImg;
      var TinderImg = document.createElement('img');
      TinderImg.src = TinderImageUrl;
-     //TinderImg.style.width = "80%";
-     //TinderImg.style.height = "auto";
      document.getElementById(CardId).appendChild(TinderImg);
+
+     //Put the BookIds i the tinder_response_array
+     tinder_response_array.push([tinder_data[i].bookId,0]);
   }
 
   //////////////////////////////////////////////////////////// Tinder card Code
@@ -99,10 +100,10 @@ d3.csv("./data/tinder_books.csv").then(tinder_data => {
         var rotate = xMulti * yMulti;
 
         if(xMulti>0){
-          tinder_response_array[tinder_index] = 1;
+          tinder_response_array[tinder_index][1] = 1;
           tinder_index += 1;
         }else {
-          tinder_response_array[tinder_index] = -1;
+          tinder_response_array[tinder_index][1] = -1;
           tinder_index += 1;
         }
 
@@ -125,11 +126,11 @@ d3.csv("./data/tinder_books.csv").then(tinder_data => {
 
       if (love) {
         card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
-        tinder_response_array[tinder_index] = 1;
+        tinder_response_array[tinder_index][1] = 1;
         tinder_index += 1;
       } else {
         card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';
-        tinder_response_array[tinder_index] = -1;
+        tinder_response_array[tinder_index][1] = -1;
         tinder_index += 1;
       }
 
