@@ -1,5 +1,7 @@
+<script src="https://d3js.org/d3.v4.js"></script>
 
-const stats = ["rating", "page", "cover", "price"]
+
+const stats = ["rating", "page", "cover", "price"];
 
 var biparite_svg = d3.select("#biparite-vizu")
                     .append("svg")
@@ -32,7 +34,7 @@ function biparite_build(g, file_name, stat){
 
       g.selectAll(".mainBars")
         .select(".perc")
-        .text(function(e){ return d3v4.format("0.0%")(e.percent);})
+        .text(function(e){ return d3.format("0.0%")(e.percent);})
         .transition()
         .duration(1000);
   }
