@@ -153,8 +153,8 @@
           </div>
 
           <!-- Cover type buttons-->
-          <div class="slide">
-            <span class="text-open-sans-ultrabold medium white" style="margin-bottom: 5vh">Select your favourite type of cover</span>
+          <div class="slide relative-slide">
+            <span class="text-open-sans-ultrabold white title-cover-pos">Select your favourite book types</span>
 
             <div class="cover-hugediv">
               <div class="cover-bigdiv">
@@ -258,12 +258,12 @@
           <!-- Explanations Page -->
           <div class="slide">
             <span class="text-open-sans-ultrabold white explanations" style="font-size:3rem">Navigating the Bubble Graph</span>
-            <span class="text-open-sans-light white explanations white">Using the informations that you gave to Philippe, he is now able to show you
-              books that may arise your interest! To prevent recommending only mainstream content, he created this bubble graph for you to navigate: <br>
-              • <b>Genres-layer:</b> each top-layer bubble represents a genre. The larger the bubble, the more books are inside.<br>
+            <span class="text-open-sans-light white explanations white">Using the information you gave to Philippe, he is now able to show you
+              books that may arise your interest! Thanks to the huge bubble graph he created, you'll be able to find all kind of non-mainstream content. It is structured as follows:<br>
+              • <b>Genres-layer:</b> Each top-layer bubble represents a genre. The larger the bubble, the more books are inside.<br>
               • <b>Book-layer:</b> Clicking on a genre bubble will zoom you into it and allow you to get a bigger pictures of the books present.
-              This time, the bigger the bubble, the more likely it is similar to books you matched in on your Tinder page!<br>
-              • <b>Info-layer:</b> A title seems appealing? Just click the particular book bubble to display all detailed information about it!
+              This time, the bigger the bubble, the more it is similar to books you matched in on your Tinder page!<br>
+              • <b>Info-layer:</b> A title seems appealing? Just click the bubble to display all detailed information about the concerned book!
               Cover, summary, price... nothing can escape you!
               <!--<br> <br> Philippe select the books only based on the preferences you selected, and based on the similarity of the words on
               the summary of the books. <b class="yellow">EXPLANATION OF THE DISTANCE SIMILARITY TODO</b> (size, book summary distance, etc...)</span>-->
@@ -285,13 +285,30 @@
           </div>
         </section>
 
-        <!-- Cat Learn More Page-->
+        <!-- Learn more on litterature pages-->
         <section class="section">
-            <span class="medium white">Philippe offering more insights on literature</span>
-        </section>
+          <div class="slide">
+            <div class="grid-container">
+              <div class="topcell"></div>
+              <div class="leftcell"></div>
+              <div class="centercell">
+                <div class="philippe-bulle">
+                  <img src="./img/bulle.png" alt="Bulle image" />
+                  <div id="dialog_l4_s1" class="fancy-text white dialog-text dialog-top-mid-position">What?<br>You're still here?!</div>
+                </div>
+                <div class="philippe-centered">
+                  <img src="./img/3-fococlipping-standard.png" id="philippe-icon-l4-s1" alt="PHILIPPE centered image"/>
+                  <button id="speech-button-l4-s1" class="speech-button"><i class="fa-solid fa-play"></i></button>
+                </div>
+                <div class="philippe-name">
+                  <span>PHILIPPE</span>
+                </div>
+              </div>
+              <div class="rightcell"></div>
+              <div class="bottomcell"></div>
+            </div>
+          </div>
 
-        <!-- Graphics Pages-->
-        <section class="section">
           <div class="slide">
             <span class="medium">Circular Timeline of published books</span>
           </div>
@@ -332,6 +349,6 @@
         navigation: true,
         slidesNavigation: true,
         loopHorizontal: false,
-        sectionsColor: ['#63474dff', '#aa767cff', '#d6a184ff', '#aa767cff', '#fec196ff', '#ffecc2ff', '#63474dff'] // '#fff9ebff'],
+        sectionsColor: ['#63474dff', '#E9CFA9ff', '#d6a184ff', '#aa767cff', '#fec196ff', '#63474dff'] // '#ffecc2ff', '#fff9ebff'], ['#63474dff', '#aa767cff', '#d6a184ff', '#aa767cff', '#fec196ff', '#63474dff']
     });
 </script>
