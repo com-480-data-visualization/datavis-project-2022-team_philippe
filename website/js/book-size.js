@@ -5,7 +5,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-const data_promise = d3.xml("./img/book.svg");
+const book_size_data_promise = d3.xml("./img/book.svg");
 const middle_part_half_height = 31.153/2;  // snooped on the svg.
 
 // Dragging variables
@@ -13,7 +13,10 @@ let first_mouse_pos = null;
 let current_book_size = 1;
 let philippe_has_been_shown = false;
 
-data_promise.then(data => {
+// Evil global mutable state
+let global_get_book_size; // it's gonna be a callable.
+
+book_size_data_promise.then(data => {
   // Insert SVG
   d3.select("#book-size").node().prepend(data.documentElement);
 
@@ -123,4 +126,17 @@ data_promise.then(data => {
   // Set size and text initially
   set_book_size(current_book_size);
   set_text();
+
+  // Do the evil stuff
+  global_get_book_size = function() {
+    if (current_book_size < 0.75) {
+      return 50;
+    } else if (current_book_size < 3) {
+      return 100;
+    } else if (current_book_size < 5) {
+      return 500;
+    } else {
+      return 1000;
+    }
+  };
 });
