@@ -1,5 +1,16 @@
-#book-size svg {
-  /* Center the SVG */
+#book-size * {
+  /* Center the SVG and text */
   display: block;
   margin: auto;
+}
+
+#book-size-top-color:hover {
+  /* Highlight on hover */
+  fill: #ffc2aa !important;
+  cursor: ns-resize;
+}
+
+#book-size span {
+  text-align: center;
+  font-size: 2vw;
 }
