@@ -7,6 +7,10 @@
   font-family: "Aktiv Grotesk", Helvetica, sans-serif;
 }
 
+.tuto {
+  top: 50%;
+}
+
 .text-centered {
   text-align: center
 }
@@ -116,6 +120,10 @@
 
 /* ------------ Fullpage fixes ------------- */
 
+.relative-slide {
+  position: relative;
+}
+
 /* Move the right arrow from the navigation */
 .fp-next {
   right: 55px;
@@ -137,26 +145,47 @@
 
 /* ------------ Coin widget layouts ------------- */
 
+.face-coin-widget {
+  max-height: 22.5vh;
+  position: absolute;
+  top: 47.7%;
+  left: 48%;
+}
+
 .coin-stack {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  position: absolute;
   top: 50%;
   left: 48%;
   transform: translate(-50%, -50%);
 }
 
 .coins-widget {
-  max-height: 3vh;
+  max-height: 4.5vh;
 }
 
-.face-coin-widget {
-  max-height: 15vh;
+.title-position {
+  position: relative;
+  top: -30%;
+  text-align: center;
+  font-size: 4vw;
+}
+
+.units-position {
+  position: relative;
+  top: 20%;
+  text-align: center;
+  font-size: 2vw;
+}
+
+.philippe-popup {
+  max-height: 12vw;
   position: absolute;
-  top: 45%;
-  left: 47%;
+  top: 35%;
+  left: 70%;
+  transform: translate(-50%, -50%);
 }
-
 
 /* ------------ Cover buttons layouts ------------- */
 
