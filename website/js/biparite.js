@@ -1,12 +1,12 @@
 
 const stats = ["rating", "page", "cover", "price"]
 
-var biparite_svg = d3.select("biparite-vizu")
+var biparite_svg = d3.select("#biparite-vizu")
                     .append("svg")
                     .attr("width", 800)
                     .attr("height", 800);
 
-var stat_selection = d3.select("biparite-vizu")
+var stat_selection = d3.select("#biparite-vizu")
                         .attr("class","btn-primary")
                         .selectAll("option")
                         .data(stats)
@@ -55,7 +55,7 @@ function biparite_build(g, file_name, stat){
 
     console.log(display_data);
 
-    function biparite_update(stat_name, display_data, g) {
+    function biparite_update(display_data, g) {
 
       biparite_svg.selectAll("g")
                   .remove()
@@ -64,7 +64,7 @@ function biparite_build(g, file_name, stat){
                   .style("fill", 'black');
 
       var g = biparite_svg.append("g")
-                          .attr("transform","translate(150,100)")
+                          .attr("transform","translate(150,100)");
 
 
       var biparite_graph = viz.bP()
@@ -109,9 +109,7 @@ function biparite_build(g, file_name, stat){
         .style("height", "800px");
       }
 
-
-
-
+      biparite_update(display_data, g)
   });
 }
 
