@@ -1,6 +1,6 @@
 
 const data_file = "../data/biparite_data.csv"
-const stats = ["ratings", "pages", "cover", "prices"]
+const stats = ["rating", "page", "cover", "price"]
 
 var biparite_svg = d3.select("biparite-vizu")
                     .append("svg")
@@ -18,8 +18,18 @@ var stat_selection = d3.select("biparite-vizu")
 
 function biparite_update(){
 
+  d3.csv(data_file).then(raw_data => {
+
+    var display_data = []
+
+    raw_data.forEach(function(row) {
 
 
+    });
+
+
+
+  });
 }
 
 function build_biparite_ratings(){
