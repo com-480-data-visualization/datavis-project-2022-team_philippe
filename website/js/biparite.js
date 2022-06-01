@@ -15,7 +15,27 @@ var stat_selection = d3.select("biparite-vizu")
                         .attr("value", function(stat){return stat})
                         .text(function(stat){return "genres VS " + String(stat);})
 
-function biparite_update(g, file_name, stat){
+function biparite_build(g, file_name, stat){
+
+  function mouseover(biparite_graph, g, elem){
+    biparite_graph.mouseover(elem);
+
+    g.selectAll(".mainBars")
+      .select(".perc")
+      .text(function(e){ return "   " +d3.format("0.0%")(e.percent);})
+      .transition()
+      .duration(1000);
+  }
+
+  function mouseout(biparite_graph, g, elem){
+      biparite_graph.mouseover(elem);
+
+      g.selectAll(".mainBars")
+        .select(".perc")
+        .text(function(e){ return d3v4.format("0.0%")(e.percent);})
+        .transition()
+        .duration(1000);
+  }
 
   d3.csv(file_name).then(raw_data => {
 
@@ -35,7 +55,7 @@ function biparite_update(g, file_name, stat){
 
     console.log(display_data);
 
-    var biparite_d3 = viz.bP()
+    var biparite_graph = viz.bP()
                         .data(display_data)
                         .min(12)
                         .pad(1)
@@ -44,6 +64,37 @@ function biparite_update(g, file_name, stat){
                         .barSize(35)
                         //.fill(e => ) TODO
 
+    g.call(biparite_graph).transition().duration(1000)
+    g.append("text").attr("x",-50).attr("y",-8).transition().duration(1000).style("text-anchor","left").text(0).style("fill", 'black');
+    g.append("text").attr("x", 450).attr("y",-8).transition().duration(1000).style("text-anchor","left").text(0).style("fill", 'black');
+    g.append("line").attr("x1",-100).transition().duration(1000).attr("x2",0);
+    g.append("line").attr("x1",400).transition().duration(1000).attr("x2",550);
+    g.append("line").attr("y1",710).transition().duration(1000).attr("y2",710).attr("x1",-100).attr("x2",0);
+    g.append("line").attr("y1",710).transition().duration(1000).attr("y2",710).attr("x1",200).attr("x2",350);
+
+    g.selectAll(".mainBars").on("mouseover",mouseover).on("mouseout",mouseout).transition().duration(3000);
+    g.selectAll(".mainBars")
+      .append("text")
+      .attr("class","label")
+      .attr("x",e=>(e.part=="primary"? -30: 50))
+      .attr("y",e=>+6)
+      .text(e=>e.key)
+      .transition()
+      .duration(1000)
+      .style("fill", 'black')
+      .attr("text-anchor",e=>(e.part=="primary"? "end": "start"));
+
+    g.selectAll(".mainBars").append("text").attr("class","perc")
+      .attr("x",e=>(e.part=="primary"? -100: 150))
+      .style("fill", 'black')
+      .attr("y",e=>+6)
+      .text(function(e){return "  "+d3.format("0.0%")(e.percent);})
+      .transition()
+      .duration(1000)
+      .attr("text-anchor",e=>(e.part=="primary"? "end": "start"));
+
+    d3.select(self.frameElement)
+      .style("height", "800px");}
 
 
 
@@ -64,7 +115,7 @@ function build_biparite_ratings(){
 
   var g = biparite_svg.append("g").attr("transform","translate(150,100)");
 
-  biparite_update(g, "../data/biparite_ratings.csv", "rating_cat")
+  biparite_build(g, "../data/biparite_ratings.csv", "rating_cat")
 }
 
 window.addEventListener('load', function() {
