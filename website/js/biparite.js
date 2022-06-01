@@ -55,46 +55,59 @@ function biparite_build(g, file_name, stat){
 
     console.log(display_data);
 
-    var biparite_graph = viz.bP()
-                        .data(display_data)
-                        .min(12)
-                        .pad(1)
-                        .height(700)
-                        .width(400)
-                        .barSize(35)
-                        //.fill(e => ) TODO
+    function biparite_update(stat_name, display_data, g) {
 
-    g.call(biparite_graph).transition().duration(1000)
-    g.append("text").attr("x",-50).attr("y",-8).transition().duration(1000).style("text-anchor","left").text(0).style("fill", 'black');
-    g.append("text").attr("x", 450).attr("y",-8).transition().duration(1000).style("text-anchor","left").text(0).style("fill", 'black');
-    g.append("line").attr("x1",-100).transition().duration(1000).attr("x2",0);
-    g.append("line").attr("x1",400).transition().duration(1000).attr("x2",550);
-    g.append("line").attr("y1",710).transition().duration(1000).attr("y2",710).attr("x1",-100).attr("x2",0);
-    g.append("line").attr("y1",710).transition().duration(1000).attr("y2",710).attr("x1",200).attr("x2",350);
+      biparite_svg.selectAll("g")
+                  .remove()
+                  .transition()
+                  .duration(1000)
+                  .style("fill", 'black');
 
-    g.selectAll(".mainBars").on("mouseover",mouseover).on("mouseout",mouseout).transition().duration(3000);
-    g.selectAll(".mainBars")
-      .append("text")
-      .attr("class","label")
-      .attr("x",e=>(e.part=="primary"? -30: 50))
-      .attr("y",e=>+6)
-      .text(e=>e.key)
-      .transition()
-      .duration(1000)
-      .style("fill", 'black')
-      .attr("text-anchor",e=>(e.part=="primary"? "end": "start"));
+      var g = biparite_svg.append("g")
+                          .attr("transform","translate(150,100)")
 
-    g.selectAll(".mainBars").append("text").attr("class","perc")
-      .attr("x",e=>(e.part=="primary"? -100: 150))
-      .style("fill", 'black')
-      .attr("y",e=>+6)
-      .text(function(e){return "  "+d3.format("0.0%")(e.percent);})
-      .transition()
-      .duration(1000)
-      .attr("text-anchor",e=>(e.part=="primary"? "end": "start"));
 
-    d3.select(self.frameElement)
-      .style("height", "800px");}
+      var biparite_graph = viz.bP()
+                          .data(display_data)
+                          .min(12)
+                          .pad(1)
+                          .height(700)
+                          .width(400)
+                          .barSize(35)
+                          //.fill(e => ) TODO
+
+      g.call(biparite_graph).transition().duration(1000)
+      g.append("text").attr("x",-50).attr("y",-8).transition().duration(1000).style("text-anchor","left").text(0).style("fill", 'black');
+      g.append("text").attr("x", 450).attr("y",-8).transition().duration(1000).style("text-anchor","left").text(0).style("fill", 'black');
+      g.append("line").attr("x1",-100).transition().duration(1000).attr("x2",0);
+      g.append("line").attr("x1",400).transition().duration(1000).attr("x2",550);
+      g.append("line").attr("y1",710).transition().duration(1000).attr("y2",710).attr("x1",-100).attr("x2",0);
+      g.append("line").attr("y1",710).transition().duration(1000).attr("y2",710).attr("x1",200).attr("x2",350);
+
+      g.selectAll(".mainBars").on("mouseover",mouseover).on("mouseout",mouseout).transition().duration(3000);
+      g.selectAll(".mainBars")
+        .append("text")
+        .attr("class","label")
+        .attr("x",e=>(e.part=="primary"? -30: 50))
+        .attr("y",e=>+6)
+        .text(e=>e.key)
+        .transition()
+        .duration(1000)
+        .style("fill", 'black')
+        .attr("text-anchor",e=>(e.part=="primary"? "end": "start"));
+
+      g.selectAll(".mainBars").append("text").attr("class","perc")
+        .attr("x",e=>(e.part=="primary"? -100: 150))
+        .style("fill", 'black')
+        .attr("y",e=>+6)
+        .text(function(e){return "  "+d3.format("0.0%")(e.percent);})
+        .transition()
+        .duration(1000)
+        .attr("text-anchor",e=>(e.part=="primary"? "end": "start"));
+
+      d3.select(self.frameElement)
+        .style("height", "800px");
+      }
 
 
 
