@@ -5,6 +5,8 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+let global_get_book_price; // evil global state
+
 const reveal_button = document.getElementById("face-coin");
 const hide_button = document.getElementById("stacked_coins");
 const coin_unit_text = document.getElementById("coin-price");
@@ -17,7 +19,7 @@ var nb_displayed_coins = 2;
 
 const txt_price_cheap = "If it's not super cheap, I'm not in!";
 const txt_price_fair = "Fair prices... fair readings!";
-const txt_price_expensive = "Wathever the price, it will be mine!";
+const txt_price_expensive = "Whatever the price, it will be mine!";
 
 reveal_button.addEventListener("click", function() {
   if(nb_displayed_coins<MAX_NB_COINS) {
@@ -25,9 +27,9 @@ reveal_button.addEventListener("click", function() {
     document.getElementById(curr_coin).classList.toggle("m-fadeIn");
     nb_displayed_coins += 1;
 
-    if(nb_displayed_coins> Math.floor(MAX_NB_COINS*(2/3))) {
+    if(nb_displayed_coins > Math.floor(MAX_NB_COINS*(2/3))) {
       coin_unit_text.innerHTML = txt_price_expensive;
-    } else if (nb_displayed_coins>Math.floor(MAX_NB_COINS*(1/3))) {
+    } else if (nb_displayed_coins > Math.floor(MAX_NB_COINS*(1/3))) {
       coin_unit_text.innerHTML = txt_price_fair;
     }
 
@@ -58,3 +60,13 @@ hide_button.addEventListener("click", function() {
     }
   }
 });
+
+global_get_book_price = function() {
+  if (nb_displayed_coins <= Math.floor(MAX_NB_COINS * (1/3))) {
+    return p => p < 3.0;
+  } else if (nb_displayed_coins <= Math.floor(MAX_NB_COINS * (2/3))) {
+    return p => p < 7.0;
+  } else {
+    return p => true;
+  }
+}

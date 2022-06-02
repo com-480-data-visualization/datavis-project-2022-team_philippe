@@ -5,6 +5,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
+let global_get_tinder_results; // evil global state
 
 d3.csv("./data/tinder_books.csv").then(tinder_data => {
 
@@ -27,7 +28,7 @@ d3.csv("./data/tinder_books.csv").then(tinder_data => {
      document.getElementById(CardId).appendChild(TinderImg);
 
      //Put the BookIds i the tinder_response_array
-     tinder_response_array.push([tinder_data[i].bookId,0]);
+     tinder_response_array.push([tinder_data[i].bookId, 0]);
   }
 
   //////////////////////////////////////////////////////////// Tinder card Code
@@ -143,4 +144,12 @@ d3.csv("./data/tinder_books.csv").then(tinder_data => {
 
   nope.addEventListener('click', createButtonListener(false));
   love.addEventListener('click', createButtonListener(true));
+
+  global_get_tinder_results = function() {
+    var ret = {};
+    for ([book_id, score] of tinder_response_array) {
+      ret[book_id] = (score == 1);
+    }
+    return ret;
+  };
 });

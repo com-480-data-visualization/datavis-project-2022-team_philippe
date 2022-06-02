@@ -5,7 +5,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-const data_promise = d3.xml("./img/book.svg");
+const book_size_data_promise = d3.xml("./img/book.svg");
 const middle_part_half_height = 31.153/2;  // snooped on the svg.
 
 // Dragging variables
@@ -13,7 +13,10 @@ let first_mouse_pos = null;
 let current_book_size = 1;
 let philippe_has_been_shown = false;
 
-data_promise.then(data => {
+// Evil global mutable state
+let global_get_book_size; // it's gonna be a callable.
+
+book_size_data_promise.then(data => {
   // Insert SVG
   d3.select("#book-size").node().prepend(data.documentElement);
 
@@ -57,16 +60,7 @@ data_promise.then(data => {
 
   function set_text() {
     if (current_book_size < 0.75) {
-      philippe_has_been_shown = false;
       text_selection.text("I don't want to deal with more than 50 pages!");
-    } else if (current_book_size < 3) {
-      philippe_has_been_shown = false;
-      text_selection.text("About a hundred pages should do fine.");
-    } else if (current_book_size < 5) {
-      philippe_has_been_shown = false;
-      text_selection.text("I can handle even 500 pages!");
-    } else {
-      text_selection.text("Bring me the biggest book you have!");
 
       if (!philippe_has_been_shown) {
         philippe_has_been_shown = true;
@@ -77,6 +71,16 @@ data_promise.then(data => {
 
         philippe_popup.classList.toggle("m-fadeIn");
       }
+
+    } else if (current_book_size < 3) {
+      philippe_has_been_shown = false;
+      text_selection.text("About a hundred pages should do fine.");
+    } else if (current_book_size < 5) {
+      philippe_has_been_shown = false;
+      text_selection.text("I can handle even 500 pages!");
+    } else {
+      philippe_has_been_shown = false;
+      text_selection.text("Bring me the biggest book you have!");
     }
   }
 
@@ -123,4 +127,17 @@ data_promise.then(data => {
   // Set size and text initially
   set_book_size(current_book_size);
   set_text();
+
+  // Do the evil stuff
+  global_get_book_size = function() {
+    if (current_book_size < 0.75) {
+      return n => n < 50;
+    } else if (current_book_size < 3) {
+      return n => n < 200 ;
+    } else if (current_book_size < 5) {
+      return n => n < 750;
+    } else {
+      return n => true;
+    }
+  };
 });
