@@ -16,7 +16,7 @@
 - goal of the website
 - intended usage
 - repository structure
-- requirements for usage (mainly developed using Chrome version ??, this type of statements)
+- requirements for usage (mainly developed using Chrome version ??, utiliser une sourie pour le Tinder, this type of statements)
 - requirements to reproduce all results (list the python version + packages required, other specific requirements)
 
 #### Repository structure
