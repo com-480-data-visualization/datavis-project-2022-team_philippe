@@ -7,7 +7,7 @@ const stats = ["rating", "page", "cover", "price"];
 var biparite_svg = d3v4.select("#biparite-vizu")
                     .append("svg")
                     .attr("width", Math.floor(WIDTH*0.65))
-                    .attr("height", Math.floor(HEIGHT*0.65));
+                    .attr("height", Math.floor(HEIGHT*0.7));
 
 function biparite_build(g, file_name, stat_id, stat_name){
 
