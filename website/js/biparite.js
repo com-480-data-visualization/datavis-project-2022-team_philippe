@@ -120,7 +120,7 @@ function build_biparite_ratings(){
   const mid_bp_width = Math.floor(WIDTH*(0.65/2))
   biparite_svg.append("text")
       .attr("x",mid_bp_width)
-      .attr("y",text_height)
+      .attr("y",40)
       .attr("class","header")
       .text("Genres VS Ratings")
       .style("fill", '#63474d')
