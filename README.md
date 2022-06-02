@@ -8,9 +8,31 @@
 | Arnaud Gaudard | 269672 |
 | Roxane Pangaud | 283177 |
 
-[Milestone 1](milestones/Milestone1Submission.pdf) • [Milestone 2](milestones/Milestone2Submission.pdf)
+[Milestone 1](milestones/Milestone1Submission.pdf) • [Milestone 2](milestones/Milestone2Submission.pdf) • [Process Book](milestones/Milestone3Handout.pdf) • [Screencast](milestones/Milestone3Handout.pdf)
 
 [Website](https://com-480-data-visualization.github.io/datavis-project-2022-team_philippe/website/)
+
+## TODO - Introduction to the project
+- goal of the website
+- intended usage
+- repository structure
+- requirements for usage (mainly developed using Chrome version ??, this type of statements)
+- requirements to reproduce all results (list the python version + packages required, other specific requirements)
+
+#### Repository structure
+    .
+    ├── data                    # raw data required for data processing
+    ├── img                     # img used for Repository display 
+    ├── milestones              # handouts and submissions  
+    ├── website                 # constains all necessary elements for the website to run
+    │   ├── css                 # css files handling layouts
+    │   ├── data                # processed datasets for d3 visualizations
+    │   ├── img                 # images ressources displayed in website
+    │   ├── js                  # javascript files handling logic
+    │   ├── lib                 # required libraries for the website to run
+    │   └── index.html          # index of the website
+    ├── data_exploration.ipynb  # notebook displaying insights on data statistics 
+    └── data_processing.ipynb   # notebook handling all dat processing for website visualizations 
 
 ## Milestone 1 (8th April, 5pm)
 
