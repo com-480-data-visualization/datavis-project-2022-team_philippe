@@ -13,53 +13,62 @@
   opacity: 0;
   transition: opacity 1s;
 
-  /* Place the tooltip on top of the window */
+  /* Place the tooltip on top of the bubble graph */
   position: absolute;
-  top: 1vh;
+  top: 50vh;
   right: 50vw;
-  transform: translateX(50%);
+  transform: translate(50%, -50%);
+  width: 50vw;
+  max-height: 70vh;
 
-  background: #E9C100;
+  background: #63474dff;
   border-radius: 3px;
 
   display: flex;
+  flex-direction: column;
+
+  font-family: Helvetica, sans-sans-serif;
+
+  padding: 2vw 2vw;
+}
+
+#bubbles-tooltip .topflex .definitions .title {
+  font-size: 2rem;
+  font-style: normal;
+}
+
+#bubbles-tooltip .format {
+  text-transform: capitalize;
+}
+
+#bubbles-tooltip .topflex {
+  display: flex;
   flex-direction: row;
-
-  font-family: Helvetica;
+  margin-bottom: 1vw;
 }
 
-#bubbles-tooltip img {
-  max-height: 40vh;
-  max-width: 10vw;
-
-  border-radius: 3px;
-
+#bubbles-tooltip .topflex img {
   vertical-align: bottom;  /* fix annoying 4px (https://stackoverflow.com/a/46891256) */
+  max-width: 10vw;
+  border-radius: 3px;
 }
 
-#bubbles-tooltip .details {
-  margin: 1vw;
+#bubbles-tooltip .topflex .definitions {
+    margin-left: 1vw;
+    font-size: 1.5rem;
+    font-style: italic;
+}
 
-  min-width: 30vw;
-  max-width: 70vw;
-
+#bubbles-tooltip .bottom {
+  overflow: auto;  /* allow scrollbar */
   text-align: justify;
 }
 
-#bubbles-tooltip .title {
-  font-weight: bold;
-  font-size: 2rem;
-}
-
 #bubbles-tooltip .x {
-  font-size: 2rem;
-  margin-left: 1vw;
-}
-
-#bubbles-tooltip .details .topbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+	font-size: 3rem;
+	padding: 0vw 1vw;
+	flex-grow: 10;
+	text-align: end;
 }
 
 #bubbles-loading {

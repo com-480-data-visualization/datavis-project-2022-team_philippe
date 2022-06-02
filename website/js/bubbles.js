@@ -72,11 +72,44 @@ function tooltip(event, the_d, tooltip_selection) {
     .text(`${the_d.data.title}`);
 
   add_new_tooltip_selection
-    .select("p")
+    .select(".author")
+    .text(`${the_d.data.author}`);
+
+  add_new_tooltip_selection
+    .select(".category")
+    .text(`${the_d.parent.id}`);
+
+  add_new_tooltip_selection
+    .select(".pages")
+    .text(`${the_d.data.pages}`);
+
+  add_new_tooltip_selection
+    .select(".format")
+    .text(`${the_d.data.bookFormat}`);
+
+  add_new_tooltip_selection
+    .select(".price")
+    .text(`${the_d.data.price}`);
+
+  add_new_tooltip_selection
+    .select(".date")
+    .text(`${the_d.data.publishDate}`);
+
+  add_new_tooltip_selection
+    .select(".rating")
+    .text(`${the_d.data.rating}`);
+
+  add_new_tooltip_selection
+    .select(".rating_number")
+    .text(`${parseInt(the_d.data.numRatings)}`);
+
+  add_new_tooltip_selection
+    .select(".bottom")
     .text(the_d.data.description);
 
   add_new_tooltip_selection
     .select(".x")
+    .select("i")
     .style("cursor", "pointer")
     .on("click", () => remove_tooltip(tooltip_selection));
 }
