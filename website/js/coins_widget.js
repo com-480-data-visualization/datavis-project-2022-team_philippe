@@ -22,6 +22,9 @@ const txt_price_fair = "Fair prices... fair readings!";
 const txt_price_expensive = "Whatever the price, it will be mine!";
 
 reveal_button.addEventListener("click", function() {
+  d3.select("#face-coin").style("box-shadow", "unset");
+  console.log(d3.select("#face-coin"))
+
   if(nb_displayed_coins<MAX_NB_COINS) {
     const curr_coin = "coin" + (nb_displayed_coins-1).toString()
     document.getElementById(curr_coin).classList.toggle("m-fadeIn");
@@ -44,6 +47,8 @@ reveal_button.addEventListener("click", function() {
 });
 
 hide_button.addEventListener("click", function() {
+  d3.select("#red-coin").style("box-shadow", "unset");
+
   if(nb_displayed_coins>MIN_NB_COINS) {
     const curr_coin = "coin" + (nb_displayed_coins-2).toString()
     document.getElementById(curr_coin).classList.toggle("m-fadeIn");
