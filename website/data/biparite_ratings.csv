@@ -1,6 +1,6 @@
 genre,rating_cat,count
-Young Adult,below 2.5 stars,1
-Fantasy,below 2.5 stars,2
+Young Adult,2.5 and below,1
+Fantasy,2.5 and below,2
 Young Adult,2.5 to 3 stars,7
 X and Erotica,2.5 to 3 stars,1
 Science Fiction,2.5 to 3 stars,3
@@ -11,7 +11,7 @@ Fantasy,2.5 to 3 stars,5
 Classics,2.5 to 3 stars,1
 Young Adult,3 to 3.5 stars,196
 X and Erotica,3 to 3.5 stars,38
-Science Fiction,3 to 3.5 stars,52
+Science Fiction,3 to 3.5 stars,51
 Romance,3 to 3.5 stars,119
 Poetry,3 to 3.5 stars,6
 Philosophy,3 to 3.5 stars,6
@@ -30,13 +30,13 @@ Philosophy,3.5 to 4 stars,173
 Mystery,3.5 to 4 stars,1203
 Manga,3.5 to 4 stars,64
 Horror,3.5 to 4 stars,748
-Fiction,3.5 to 4 stars,3849
+Fiction,3.5 to 4 stars,3848
 Fantasy,3.5 to 4 stars,2028
 Classics,3.5 to 4 stars,464
 Young Adult,4 to 4.5 stars,1136
 X and Erotica,4 to 4.5 stars,146
 Science Fiction,4 to 4.5 stars,586
-Romance,4 to 4.5 stars,2060
+Romance,4 to 4.5 stars,2059
 Poetry,4 to 4.5 stars,443
 Philosophy,4 to 4.5 stars,295
 Mystery,4 to 4.5 stars,1004

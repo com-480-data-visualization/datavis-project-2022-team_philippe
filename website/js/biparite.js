@@ -7,7 +7,7 @@ const stats = ["rating", "page", "cover", "price"];
 var biparite_svg = d3v4.select("#biparite-vizu")
                     .append("svg")
                     .attr("width", Math.floor(WIDTH*0.65))
-                    .attr("height", Math.floor(HEIGHT*0.8));
+                    .attr("height", Math.floor(HEIGHT*0.65));
 
 function biparite_build(g, file_name, stat_id, stat_name){
 
@@ -34,12 +34,8 @@ function biparite_build(g, file_name, stat_id, stat_name){
                   .duration(1000)
                   .style("fill", 'black');
 
-      // TODO
-      //const translate_factor = Math.floor(WIDTH*0.0977).toString() + "," + Math.floor(WIDTH*0.023).toString();
-      const translate_factor = Math.floor(WIDTH*0.18).toString() + "," + Math.floor(WIDTH*0.04).toString();
-
-
       // position the bp element in the global svg
+      const translate_factor = Math.floor(WIDTH*0.18).toString() + "," + Math.floor(WIDTH*0.04).toString();
       var group = biparite_svg.append("g")
                           .attr("transform","translate("+translate_factor+")");
 
@@ -47,7 +43,7 @@ function biparite_build(g, file_name, stat_id, stat_name){
                           .data(display_data)
                           .min(12)
                           .pad(1.5)
-                          .height(Math.floor(HEIGHT*0.7))
+                          .height(Math.floor(HEIGHT*0.6))
                           .width(Math.floor(WIDTH*0.3))
                           .barSize(WIDTH*0.023)
                           .fill(e => '#63474d');
@@ -106,7 +102,7 @@ function biparite_build(g, file_name, stat_id, stat_name){
         .attr("text-anchor",e=>(e.part=="primary"? "end": "start"));
 
       d3v4.select(self.frameElement)
-        .style("height", Math.floor(HEIGHT*0.8));
+        .style("height", Math.floor(HEIGHT*0.75));
       }
 
       biparite_update(display_data, g);
@@ -117,11 +113,11 @@ function build_biparite_ratings(){
   biparite_svg.selectAll("*")
               .remove();
 
-  text_height = "4vh";
 
-  const mid_bp_width = Math.floor(WIDTH*(0.65/2))
 
   // display and position biparite title
+  const text_height = "4vh";
+  const mid_bp_width = Math.floor(WIDTH*(0.65/2))
   biparite_svg.append("text")
       .attr("x",mid_bp_width)
       .attr("y",text_height)
