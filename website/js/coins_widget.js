@@ -63,10 +63,10 @@ hide_button.addEventListener("click", function() {
 
 global_get_book_price = function() {
   if (nb_displayed_coins <= Math.floor(MAX_NB_COINS * (1/3))) {
-    return 3;
+    return p => p < 3.0;
   } else if (nb_displayed_coins <= Math.floor(MAX_NB_COINS * (2/3))) {
-    return 7;
+    return p => p < 7.0;
   } else {
-    return 10;
+    return p => true;
   }
 }

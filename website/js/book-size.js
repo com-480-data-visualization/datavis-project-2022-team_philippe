@@ -60,16 +60,7 @@ book_size_data_promise.then(data => {
 
   function set_text() {
     if (current_book_size < 0.75) {
-      philippe_has_been_shown = false;
       text_selection.text("I don't want to deal with more than 50 pages!");
-    } else if (current_book_size < 3) {
-      philippe_has_been_shown = false;
-      text_selection.text("About a hundred pages should do fine.");
-    } else if (current_book_size < 5) {
-      philippe_has_been_shown = false;
-      text_selection.text("I can handle even 500 pages!");
-    } else {
-      text_selection.text("Bring me the biggest book you have!");
 
       if (!philippe_has_been_shown) {
         philippe_has_been_shown = true;
@@ -80,6 +71,16 @@ book_size_data_promise.then(data => {
 
         philippe_popup.classList.toggle("m-fadeIn");
       }
+
+    } else if (current_book_size < 3) {
+      philippe_has_been_shown = false;
+      text_selection.text("About a hundred pages should do fine.");
+    } else if (current_book_size < 5) {
+      philippe_has_been_shown = false;
+      text_selection.text("I can handle even 500 pages!");
+    } else {
+      philippe_has_been_shown = false;
+      text_selection.text("Bring me the biggest book you have!");
     }
   }
 
@@ -130,13 +131,13 @@ book_size_data_promise.then(data => {
   // Do the evil stuff
   global_get_book_size = function() {
     if (current_book_size < 0.75) {
-      return 50;
+      return n => n < 50;
     } else if (current_book_size < 3) {
-      return 100;
+      return n => n < 200 ;
     } else if (current_book_size < 5) {
-      return 500;
+      return n => n < 750;
     } else {
-      return 1000;
+      return n => true;
     }
   };
 });

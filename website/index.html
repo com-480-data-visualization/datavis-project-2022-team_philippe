@@ -152,12 +152,12 @@
             <div id="book-size">
                 <span class="text-open-sans-ultrabold white"></span>
             </div>
-            <img src="./img/4-fococlipping-standard.png" id="book-size-philippe-popup" class="philippe-popup ghost-elem" style="transform:rotate(-25deg);"/>
+            <img src="./img/5-fococlipping-standard.png" id="book-size-philippe-popup" class="philippe-popup ghost-elem" style="transform:rotate(-25deg);"/>
           </div>
 
           <!-- Cover type buttons-->
           <div class="slide relative-slide">
-            <span class="text-open-sans-ultrabold white title-cover-pos">Select your favourite book types</span>
+            <span class="text-open-sans-ultrabold white title-cover-pos">Select your favourite book formats</span>
 
             <div class="cover-hugediv">
               <div class="cover-bigdiv">
@@ -285,6 +285,21 @@
                     <p></p>
                 </div>
             </div>
+            <div id="bubbles-loading">
+                <span class="text-open-sans-ultrabold white explanations">Loading...</span>
+            </div>
+            <div id="bubbles-philippe">
+                <div class="philippe-bulle">
+                  <img src="./img/bulle.png" alt="Bulle image" />
+                  <div class="fancy-text white dialog-text dialog-top-mid-position">How selective are you?!<br>Did you use the widgets?</div>
+                </div>
+                <div class="philippe-centered">
+                  <img src="./img/6-fococlipping-standard.png" alt="PHILIPPE centered image"/>
+                </div>
+                <div class="philippe-name">
+                  <span>PHILIPPE</span>
+                </div>
+            </div>
           </div>
         </section>
 
@@ -352,11 +367,26 @@
 
 <script type="text/javascript" src="lib/fullpage.js"></script>
 <script type="text/javascript">
+    var disgusting_fullpage_state = 0;  // remembers at which slide we are for section 3. fullpage does not handle this basic shit for us...
+
     var myFullpage = new fullpage('#fullpage', {
         licenseKey: 'gplv3-license',
         navigation: true,
         slidesNavigation: true,
         loopHorizontal: false,
-        sectionsColor: ['#63474dff', '#E9CFA9ff', '#d6a184ff', '#aa767cff', '#fec196ff', '#63474dff'] // '#ffecc2ff', '#fff9ebff'], ['#63474dff', '#aa767cff', '#d6a184ff', '#aa767cff', '#fec196ff', '#63474dff']
+        sectionsColor: ['#63474dff', '#E9CFA9ff', '#d6a184ff', '#aa767cff', '#fec196ff', '#63474dff'],
+        onSlideLeave: function(section, origin, destination, direction) {
+            if (section.index == 3) {
+                disgusting_fullpage_state = destination.index;
+                if (destination.index == 1) {
+                    global_refresh_bubbles();
+                }
+            }
+        },
+        onLeave: function(origin, destination, direction, trigger) {
+            if (destination.index == 3 && disgusting_fullpage_state == 1) {
+                global_refresh_bubbles();
+            }
+        }
     });
 </script>

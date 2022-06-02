@@ -61,3 +61,15 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+#bubbles-loading {
+  position: absolute;
+  top: 50vh;
+  right: 50vw;
+  transform: translate(50%, -50%);
+
+  background: #E9C100;
+  border-radius: 3px;
+
+  font-size: 3rem;
+}

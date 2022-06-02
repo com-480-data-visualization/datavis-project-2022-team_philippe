@@ -17,11 +17,15 @@ let bubbles_color = d3.scaleLinear()  // it is a callable.
   .interpolate(d3.interpolateHcl)
 
 function label_vh_size_absolute(d, original_center_r) {
-  return d.r / original_center_r * 100 * (d.children ? 0.2 : 0.3);
+  var bubble_size_in_vh = d.r / original_center_r * 100;
+  var font_vh_when_zoomed_to_bubble = 10;
+  var small_bubbles_bump = d.r < 1.5 ? 4.0 : 1.0;
+
+  return bubble_size_in_vh * font_vh_when_zoomed_to_bubble/100 * small_bubbles_bump;
 }
 
 function label_vh_size_relative(d) {
-  return d.r / d.parent.r * 100 * (d.children ? 0.2 : 0.3);
+  return d.r / d.parent.r * 100 * (d.children ? 0.2 : 0.1);
 }
 
 function label_opacity(d, focused) {
@@ -30,7 +34,7 @@ function label_opacity(d, focused) {
   } else if (focused.depth == 2) {
     return (d.parent === focused.parent) ? 1 : 0;
   } else {
-    const d_is_big_enough_child_of_focused = (d.parent === focused && label_vh_size_relative(d) > 1.5); // fonts smaller than 1.5vh are illegible
+    const d_is_big_enough_child_of_focused = (d.parent === focused && label_vh_size_relative(d) > 1);
     const d_is_focused = (d === focused);
 
     return d_is_focused ? 0.2 : (d_is_big_enough_child_of_focused ? 1 : 0);
@@ -89,12 +93,17 @@ function remove_tooltip(tooltip_selection) {
 // ----------------
 
 function global_refresh_bubbles() {
+  d3.select("#bubbles-philippe").style("display", "none");
+  d3.select("#bubbles-loading").style("display", "block");
+
   d3.csv("./data/bubble_graph_books_data.csv").then(raw_data => {
-
-    var parents_child_count = {};
     var tinder_results = global_get_tinder_results();
+    var cover_filter = global_get_cover_style();
+    var book_size_filter = global_get_book_size();
+    var book_price_filter = global_get_book_price();
 
-    var liked_sim_col_names = [
+    var category_has_a_child = {};
+    var sim_col_names = [
       "sim_2767052-the-hunger-games",
       "sim_2.Harry_Potter_and_the_Order_of_the_Phoenix",
       "sim_2657.To_Kill_a_Mockingbird",
@@ -125,46 +134,134 @@ function global_refresh_bubbles() {
       "sim_22034.The_Godfather",
       "sim_830502.It",
       "sim_1845.Into_the_Wild"
-    ].filter(x => tinder_results[x.substring(4)]);
+    ];
+
+    let liked_sim_col_names = sim_col_names.filter(x => tinder_results[x.substring(4)]);
+    let disliked_sim_col_names = sim_col_names.filter(x => !tinder_results[x.substring(4)]);
 
     // Data filtering
     let data = raw_data.filter(row => {
 
+      // Always accept root and categories
       if (row.bookId == "ROOT") {
         return true;
       }
       else if (row.parentId == "ROOT") {
-        parents_child_count[row.bookId] = false;
+        category_has_a_child[row.bookId] = false;
         return true;
       }
 
-      var pass = false;
-      var threshold = (1/1450)*liked_sim_col_names.length + (63/1160);  // science
-      for (col of liked_sim_col_names) {
-        if (`sim_${row.bookId}` == col) {
-          return false;  // Forbid liked tinder books from showing up
-        }
+      // Zeroth: is this book a tinder book already?
+      if (sim_col_names.indexOf(`sim_${row.bookId}`) != -1) {
+        return false; // refuse the book - the user already knows it.
+      }
 
-        pass = pass || Number(row[col]) > threshold;
-        if (pass) {
+      // First: apply widget filters
+      if (!cover_filter(row)) {
+        return false;
+      }
+
+      if (!book_size_filter(row.pages)) {
+        return false;
+      }
+
+      if (!book_price_filter(row.price)) {
+        return false;
+      }
+
+      // Second: is this book most similar to a liked or disliked tinder book?
+      var max_sim = -1;
+      var max_sim_col_liked = false;
+      for (col of sim_col_names) {
+        if (Number(row[col]) > max_sim) {
+          max_sim = Number(row[col]);
+          max_sim_col_liked = (liked_sim_col_names.indexOf(col) != -1);
+        }
+      }
+      if (!max_sim_col_liked) {
+        return false; // refuse the book - it is most similar to a -disliked- tinder book.
+      }
+
+      // Third: is this book similar enough to any liked book?
+      var pass = false;
+      for (col of liked_sim_col_names) {
+        if (Number(row[col]) > 0.03) {
+          pass = true;
           break;
         }
       }
 
       if (pass) {
-        parents_child_count[row.parentId] = true;
+        category_has_a_child[row.parentId] = true;
       }
 
       return pass;
     });
 
-    // Remove childless parents
+    console.log("first pass size", data.length);
+
+    // Remove low-similarity stuff until there are no more than MAX_BOOKS books in the page. Question of performance really.
+    const MAX_BOOKS = 15000;
+    var threshold = 0.03;
+    while (data.length > MAX_BOOKS) {
+      threshold += 0.01; // become more strict
+      category_has_a_child = {}; // reset this.
+
+      var data2 = data.filter(row => {
+        // slight copy paste but oh well ↓
+
+        // Always accept root and categories
+        if (row.bookId == "ROOT") {
+          return true;
+        }
+        else if (row.parentId == "ROOT") {
+          category_has_a_child[row.bookId] = false;
+          return true;
+        }
+
+        var pass = false;
+        for (col of liked_sim_col_names) {
+          if (Number(row[col]) > threshold) {
+            pass = true;
+            break;
+          }
+        }
+
+        if (pass) {
+          category_has_a_child[row.parentId] = true;
+        }
+
+        return pass;
+      });
+
+      data = data2;
+      console.log("reducing books to", data.length);
+      if (data.length <= MAX_BOOKS) {
+        break;
+      }
+    }
+
+    console.log("second pass size", data.length);
+
+    // Remove childless parents (rip them)
     data = data.filter(row => {
       if (row.bookId == "ROOT" || row.parentId != "ROOT") {
         return true;
       }
-      return parents_child_count[row.bookId];
+
+      return category_has_a_child[row.bookId];
     });
+
+    console.log("third pass size", data.length);
+
+    if (data.length == 1) {
+      // The user either did not fill the widgets or was too selective.
+      // Display angry philippe and return.
+      d3.select("#bubbles").select("svg").style("display", "none");
+      d3.select("#bubbles-loading").style("display", "none");
+      d3.select("#bubbles-philippe").style("display", "block");
+      return;
+    }
 
     data = d3.stratify()  // from here on, `data` contains stuff with the d3 format.
       .id(raw_d => raw_d.bookId)
@@ -190,8 +287,6 @@ function global_refresh_bubbles() {
 
       return Math.max(0.05, Math.min(1, size)); // science
     });
-
-    console.log(data, liked_sim_col_names)
 
     data = d3.pack()
       .size([width, height])
@@ -285,7 +380,6 @@ function global_refresh_bubbles() {
       .style("fill-opacity", d => label_opacity(d, root_data))
       .style("display", d => d.parent.id === "ROOT" ? "inline" : "none")
       .style("font-size", d => `${label_vh_size_absolute(d, original_center_r)}vh`)
-      .attr("transform", d => `rotate(25, ${d.x}, ${d.y})`)
       .text(d => {
         if (d.parent.id == "ROOT") {
           return d.id;
@@ -296,15 +390,18 @@ function global_refresh_bubbles() {
       })
       .attr("x", d => d.x)
       .attr("y", d => d.y)
+      .attr("transform", d => `rotate(25, ${d.x}, ${d.y})`)
       .each(function(d) {
         d.__label__ = this;  // dinguerie but it works °o°
       });
 
-    philippe_popup.classList.toggle("m-fadeIn");
-
     let tooltip_selection = d3.select("#bubbles-tooltip").data([{
       viewed_id: null
     }]);
+
+    d3.select("#bubbles").select("svg").style("display", "block");
+    d3.select("#bubbles-loading").style("display", "none");
+    zoom(null, root_data);
 
     // Functions
     function zoom(event, d) {
@@ -373,5 +470,3 @@ function global_refresh_bubbles() {
     }
   });
 }
-
-global_refresh_bubbles();
