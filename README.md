@@ -21,18 +21,18 @@
 
 #### Repository structure
     .
-    ├── data                    # raw data required for data processing
-    ├── img                     # img used for Repository display 
-    ├── milestones              # handouts and submissions  
-    ├── website                 # constains all necessary elements for the website to run
-    │   ├── css                 # css files handling layouts
-    │   ├── data                # processed datasets for d3 visualizations
-    │   ├── img                 # images ressources displayed in website
-    │   ├── js                  # javascript files handling logic
-    │   ├── lib                 # required libraries for the website to run
-    │   └── index.html          # index of the website
-    ├── data_exploration.ipynb  # notebook displaying insights on data statistics 
-    └── data_processing.ipynb   # notebook handling all dat processing for website visualizations 
+    ├── data                        # raw data required for data processing
+    ├── img                         # img used for Repository display 
+    ├── milestones                  # handouts and submissions  
+    ├── website                     # constains all necessary elements for the website to run
+    │   ├── css                     # css files handling layouts
+    │   ├── data                    # processed datasets for d3 visualizations
+    │   ├── img                     # images ressources displayed in website
+    │   ├── js                      # javascript files handling logic
+    │   ├── lib                     # required libraries for the website to run
+    │   └── index.html              # index of the website
+    ├── data_exploration.ipynb      # notebook displaying insights on data statistics 
+    └── data_processing.ipynb       # notebook handling all dat processing for website visualizations 
 
 ## Milestone 1 (8th April, 5pm)
 
