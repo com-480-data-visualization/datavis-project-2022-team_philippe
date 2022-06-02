@@ -1,0 +1,62 @@
+#face-coin {
+  border-radius: 50%;
+  box-shadow:
+    0 0 30px 15px #4fc440;
+}
+
+#red-coin {
+  border-radius: 9px;
+  box-shadow:
+    0 0 30px 15px #d12a2a;
+}
+
+.face-coin-widget {
+  max-height: 22.5vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  cursor:pointer;
+}
+
+.coin-stack {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  cursor:pointer;
+}
+
+.coins-widget {
+  max-height: 4.5vh;
+}
+
+.title-position {
+  position: relative;
+  top: -30%;
+  text-align: center;
+  font-size: 4vw;
+}
+
+.title-cover-pos {
+  font-size: 4vw;
+  text-align: center;
+  position: relative;
+  top: -11.5%;
+}
+
+.units-position {
+  position: relative;
+  top: 20%;
+  text-align: center;
+  font-size: 2vw;
+}
+
+.philippe-popup {
+  max-height: 12vw;
+  position: absolute;
+  top: 35%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
