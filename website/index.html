@@ -25,13 +25,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap" rel="stylesheet">
 
-    <!-- Add Front Awesom Kit (icons on buttons)-->
+    <!-- Front Awesom Kit (icons on buttons)-->
     <script src="https://kit.fontawesome.com/552632b0d1.js" crossorigin="anonymous"></script>
 
     <!-- Access jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
 
+    <!-- import libraries (including two versions of d3) -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script>d3v4 = d3; window.d3 = null;</script>
+    <script src="lib/bipartitelib.js"></script>
+    <script src="lib/d3.js"></script>
+    <script src="lib/hammer.min.js"></script>
 
 </head>
 
@@ -313,9 +319,7 @@
           </div>
 
           <div class="slide">
-            <div id="biparite-vizu">
-              <span class="medium">Links between Genres and Statistics</span>
-            </div>
+            <div id="biparite-vizu" class="center-svg"></div>
           </div>
           <div class="slide">
             <span class="medium">Circular Timeline of published books</span>
@@ -338,17 +342,15 @@
     </div>
 </body>
 
-<!-- Scripts imports -->
-<script src="lib/d3.js"></script>
-<script src="lib/hammer.min.js"></script>
-<script src="js/coins_widget.js"></script>
-<script src="js/book-size.js"></script>
-<script src="js/bubbles.js"></script>
-<script src="js/tinder.js"></script>
+<!-- visualizations imports -->
 <script src="js/dialogs.js"></script>
+<script src="js/tinder.js"></script>
+<script src="js/book-size.js"></script>
+<script src="js/coins_widget.js"></script>
+<script src="js/bubbles.js"></script>
 <script src="js/biparite.js"></script>
-<script src="lib/bipartitelib.js"></script>
 
+<!-- fullpage setup -->
 <script type="text/javascript" src="lib/fullpage.js"></script>
 <script type="text/javascript">
     var myFullpage = new fullpage('#fullpage', {

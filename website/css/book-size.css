@@ -14,3 +14,9 @@
   text-align: center;
   font-size: 2vw;
 }
+
+.center-svg * {
+  /* Center the SVG and text */
+  display: block;
+  margin: auto;
+}

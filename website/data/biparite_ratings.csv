@@ -1,59 +1,59 @@
 genre,rating_cat,count
-Classics,2.5 to 3 stars,1
-Classics,3 to 3.5 stars,52
-Classics,3.5 to 4 stars,464
-Classics,4 to 4.5 stars,383
-Classics,4.5 to 5 stars,18
-Fantasy,2.5 to 3 stars,5
-Fantasy,3 to 3.5 stars,132
-Fantasy,3.5 to 4 stars,2028
-Fantasy,4 to 4.5 stars,2597
-Fantasy,4.5 to 5 stars,263
-Fantasy,below 2.5 stars,2
-Fiction,2.5 to 3 stars,25
-Fiction,3 to 3.5 stars,576
-Fiction,3.5 to 4 stars,3849
-Fiction,4 to 4.5 stars,2721
-Fiction,4.5 to 5 stars,85
-Horror,2.5 to 3 stars,4
-Horror,3 to 3.5 stars,70
-Horror,3.5 to 4 stars,748
-Horror,4 to 4.5 stars,686
-Horror,4.5 to 5 stars,59
-Manga,3 to 3.5 stars,2
-Manga,3.5 to 4 stars,64
-Manga,4 to 4.5 stars,426
-Manga,4.5 to 5 stars,54
-Mystery,3 to 3.5 stars,77
-Mystery,3.5 to 4 stars,1203
-Mystery,4 to 4.5 stars,1004
-Mystery,4.5 to 5 stars,37
-Philosophy,3 to 3.5 stars,6
-Philosophy,3.5 to 4 stars,173
-Philosophy,4 to 4.5 stars,295
-Philosophy,4.5 to 5 stars,10
-Poetry,3 to 3.5 stars,6
-Poetry,3.5 to 4 stars,103
-Poetry,4 to 4.5 stars,443
-Poetry,4.5 to 5 stars,53
-Romance,2.5 to 3 stars,2
-Romance,3 to 3.5 stars,119
-Romance,3.5 to 4 stars,1609
-Romance,4 to 4.5 stars,2060
-Romance,4.5 to 5 stars,93
-Science Fiction,2.5 to 3 stars,3
-Science Fiction,3 to 3.5 stars,52
-Science Fiction,3.5 to 4 stars,641
-Science Fiction,4 to 4.5 stars,586
-Science Fiction,4.5 to 5 stars,34
-X and Erotica,2.5 to 3 stars,1
-X and Erotica,3 to 3.5 stars,38
-X and Erotica,3.5 to 4 stars,130
-X and Erotica,4 to 4.5 stars,146
-X and Erotica,4.5 to 5 stars,11
-Young Adult,2.5 to 3 stars,7
-Young Adult,3 to 3.5 stars,196
-Young Adult,3.5 to 4 stars,1892
-Young Adult,4 to 4.5 stars,1136
-Young Adult,4.5 to 5 stars,28
 Young Adult,below 2.5 stars,1
+Fantasy,below 2.5 stars,2
+Young Adult,2.5 to 3 stars,7
+X and Erotica,2.5 to 3 stars,1
+Science Fiction,2.5 to 3 stars,3
+Romance,2.5 to 3 stars,2
+Horror,2.5 to 3 stars,4
+Fiction,2.5 to 3 stars,25
+Fantasy,2.5 to 3 stars,5
+Classics,2.5 to 3 stars,1
+Young Adult,3 to 3.5 stars,196
+X and Erotica,3 to 3.5 stars,38
+Science Fiction,3 to 3.5 stars,52
+Romance,3 to 3.5 stars,119
+Poetry,3 to 3.5 stars,6
+Philosophy,3 to 3.5 stars,6
+Mystery,3 to 3.5 stars,77
+Manga,3 to 3.5 stars,2
+Horror,3 to 3.5 stars,70
+Fiction,3 to 3.5 stars,576
+Fantasy,3 to 3.5 stars,132
+Classics,3 to 3.5 stars,52
+Young Adult,3.5 to 4 stars,1892
+X and Erotica,3.5 to 4 stars,130
+Science Fiction,3.5 to 4 stars,641
+Romance,3.5 to 4 stars,1609
+Poetry,3.5 to 4 stars,103
+Philosophy,3.5 to 4 stars,173
+Mystery,3.5 to 4 stars,1203
+Manga,3.5 to 4 stars,64
+Horror,3.5 to 4 stars,748
+Fiction,3.5 to 4 stars,3849
+Fantasy,3.5 to 4 stars,2028
+Classics,3.5 to 4 stars,464
+Young Adult,4 to 4.5 stars,1136
+X and Erotica,4 to 4.5 stars,146
+Science Fiction,4 to 4.5 stars,586
+Romance,4 to 4.5 stars,2060
+Poetry,4 to 4.5 stars,443
+Philosophy,4 to 4.5 stars,295
+Mystery,4 to 4.5 stars,1004
+Manga,4 to 4.5 stars,425
+Horror,4 to 4.5 stars,686
+Fiction,4 to 4.5 stars,2721
+Fantasy,4 to 4.5 stars,2597
+Classics,4 to 4.5 stars,383
+Young Adult,4.5 to 5 stars,28
+X and Erotica,4.5 to 5 stars,11
+Science Fiction,4.5 to 5 stars,34
+Romance,4.5 to 5 stars,93
+Poetry,4.5 to 5 stars,53
+Philosophy,4.5 to 5 stars,10
+Mystery,4.5 to 5 stars,37
+Manga,4.5 to 5 stars,54
+Horror,4.5 to 5 stars,59
+Fiction,4.5 to 5 stars,85
+Fantasy,4.5 to 5 stars,263
+Classics,4.5 to 5 stars,18
