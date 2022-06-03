@@ -1,6 +1,6 @@
 # Data Visualization Project (COM-480)
 
-## Studio Bibli <!--Insert outstanding title **TODO**-->
+## Studio Bibli
 
 | Student's name | SCIPER |
 | -------------- | ------ |
@@ -12,12 +12,22 @@
 
 [Website](https://com-480-data-visualization.github.io/datavis-project-2022-team_philippe/website/)
 
-## TODO - Introduction to the project
-- goal of the website
-- intended usage
-- repository structure
-- requirements for usage (mainly developed using Chrome version ??, utiliser une sourie pour le Tinder, this type of statements)
-- requirements to reproduce all results (list the python version + packages required, other specific requirements)
+#### Introduction
+Our website, Studio Bibli, is a treasure trove of books you've never seen!
+
+Philippe the cat will introduce you. Just tell him about some of the books you like, and whether you're into reading huge chunks of paper, or small novellas. 
+
+Do you just read ebooks because you have no bookshelf? Philippe has got you covered, just filter out the physical book formats. 
+Are you tight on money? Or do you like to splurge on limited editions? Studio Bibli allows you to specify that too.
+
+When you're done filling your info, Philippe will prepare for you a bubble map: enjoy exploring a whole universe of books that are just similar to your tastes !
+
+After that, Philippe will get out some statistics from his filing cabinet, for you to enjoy.
+
+#### Requirements
+This visualisation is not meant to be used on a mobile device. Please use a computer with a mouse, and a modern browser (no IE, obviously).
+
+If you would like to reproduce our dataset, please refer to the enclosed jupyter notebooks. We have used conda for its large amount of useful libraries.
 
 #### Repository structure
     .
