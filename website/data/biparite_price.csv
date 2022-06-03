@@ -1,0 +1,72 @@
+genre,price_cat,count
+Young Adult,a1$ or less,57
+Science Fiction,a1$ or less,5
+Romance,a1$ or less,53
+Poetry,a1$ or less,6
+Philosophy,a1$ or less,2
+Mystery,a1$ or less,22
+Manga,a1$ or less,11
+Horror,a1$ or less,14
+Fiction,a1$ or less,97
+Fantasy,a1$ or less,57
+Classics,a1$ or less,19
+Young Adult,b1-3$,539
+X and Erotica,b1-3$,15
+Science Fiction,b1-3$,129
+Romance,b1-3$,503
+Poetry,b1-3$,51
+Philosophy,b1-3$,30
+Mystery,b1-3$,414
+Manga,b1-3$,107
+Horror,b1-3$,114
+Fiction,b1-3$,1150
+Fantasy,b1-3$,616
+Classics,b1-3$,146
+Young Adult,c3-5$,1075
+X and Erotica,c3-5$,28
+Science Fiction,c3-5$,293
+Romance,c3-5$,830
+Poetry,c3-5$,88
+Philosophy,c3-5$,57
+Mystery,c3-5$,745
+Manga,c3-5$,96
+Horror,c3-5$,260
+Fiction,c3-5$,2245
+Fantasy,c3-5$,1231
+Classics,c3-5$,203
+Young Adult,d5-10$,1387
+X and Erotica,d5-10$,244
+Science Fiction,d5-10$,676
+Romance,d5-10$,2222
+Poetry,d5-10$,259
+Philosophy,d5-10$,206
+Mystery,d5-10$,943
+Manga,d5-10$,181
+Horror,d5-10$,942
+Fiction,d5-10$,2864
+Fantasy,d5-10$,2382
+Classics,d5-10$,375
+Young Adult,e10-20$,158
+X and Erotica,e10-20$,27
+Science Fiction,e10-20$,148
+Romance,e10-20$,214
+Poetry,e10-20$,155
+Philosophy,e10-20$,125
+Mystery,e10-20$,142
+Manga,e10-20$,92
+Horror,e10-20$,155
+Fiction,e10-20$,643
+Fantasy,e10-20$,487
+Classics,e10-20$,115
+Young Adult,f20$ or more,44
+X and Erotica,f20$ or more,12
+Science Fiction,f20$ or more,65
+Romance,f20$ or more,60
+Poetry,f20$ or more,46
+Philosophy,f20$ or more,64
+Mystery,f20$ or more,55
+Manga,f20$ or more,59
+Horror,f20$ or more,82
+Fiction,f20$ or more,257
+Fantasy,f20$ or more,254
+Classics,f20$ or more,60

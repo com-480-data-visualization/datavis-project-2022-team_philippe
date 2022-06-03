@@ -1,0 +1,73 @@
+genre,title_cat,count
+Young Adult,a5 or less,186
+X and Erotica,a5 or less,23
+Science Fiction,a5 or less,61
+Romance,a5 or less,161
+Poetry,a5 or less,15
+Philosophy,a5 or less,1
+Mystery,a5 or less,35
+Manga,a5 or less,6
+Horror,a5 or less,90
+Fiction,a5 or less,234
+Fantasy,a5 or less,132
+Classics,a5 or less,14
+Young Adult,b5-10 charac,816
+X and Erotica,b5-10 charac,74
+Science Fiction,b5-10 charac,268
+Romance,b5-10 charac,681
+Poetry,b5-10 charac,53
+Philosophy,b5-10 charac,29
+Mystery,b5-10 charac,336
+Manga,b5-10 charac,19
+Horror,b5-10 charac,383
+Fiction,b5-10 charac,1066
+Fantasy,b5-10 charac,830
+Classics,b5-10 charac,113
+Young Adult,c10-15 charac,912
+X and Erotica,c10-15 charac,93
+Science Fiction,c10-15 charac,318
+Romance,c10-15 charac,1206
+Poetry,c10-15 charac,115
+Philosophy,c10-15 charac,49
+Mystery,c10-15 charac,666
+Manga,c10-15 charac,42
+Horror,c10-15 charac,439
+Fiction,c10-15 charac,1814
+Fantasy,c10-15 charac,1286
+Classics,c10-15 charac,186
+Young Adult,d15-25 charac,926
+X and Erotica,d15-25 charac,101
+Science Fiction,d15-25 charac,459
+Romance,d15-25 charac,1516
+Poetry,d15-25 charac,167
+Philosophy,d15-25 charac,129
+Mystery,d15-25 charac,923
+Manga,d15-25 charac,242
+Horror,d15-25 charac,462
+Fiction,d15-25 charac,2859
+Fantasy,d15-25 charac,1976
+Classics,d15-25 charac,339
+Young Adult,e25-50 charac,373
+X and Erotica,e25-50 charac,28
+Science Fiction,e25-50 charac,170
+Romance,e25-50 charac,284
+Poetry,e25-50 charac,211
+Philosophy,e25-50 charac,162
+Mystery,e25-50 charac,326
+Manga,e25-50 charac,222
+Horror,e25-50 charac,162
+Fiction,e25-50 charac,1085
+Fantasy,e25-50 charac,673
+Classics,e25-50 charac,208
+Young Adult,f50 or more,47
+X and Erotica,f50 or more,7
+Science Fiction,f50 or more,40
+Romance,f50 or more,34
+Poetry,f50 or more,44
+Philosophy,f50 or more,114
+Mystery,f50 or more,35
+Manga,f50 or more,15
+Horror,f50 or more,31
+Fiction,f50 or more,198
+Fantasy,f50 or more,130
+Classics,f50 or more,58

@@ -1,20 +1,18 @@
 
 const WIDTH = window.screen.width;
 const HEIGHT = window.screen.height;
-
-const stats = ["rating", "page", "cover", "price"];
+const stats = ["rating", "page", "title_length", "price"];
 
 var biparite_svg = d3v4.select("#biparite-vizu")
                     .append("svg")
                     .attr("width", Math.floor(WIDTH*0.65))
                     .attr("height", Math.floor(HEIGHT*0.7));
 
-function biparite_build(g, file_name, stat_id, stat_name){
 
+function biparite_build(g, file_name, stat_id, stat_name){
   const bp_title = "Genre VS "+stat_name;
 
   d3v4.csv(file_name, function(error, raw_data) {
-
     var display_data = []
 
     raw_data.forEach(function(row) {
@@ -27,7 +25,6 @@ function biparite_build(g, file_name, stat_id, stat_name){
     });
 
     function biparite_update(display_data, g) {
-
       biparite_svg.selectAll("g")
                   .remove()
                   .transition()
@@ -39,6 +36,7 @@ function biparite_build(g, file_name, stat_id, stat_name){
       var group = biparite_svg.append("g")
                           .attr("transform","translate("+translate_factor+")");
 
+      // init main biparite logic using bipartitelib
       var biparite_graph = viz.bP()
                           .data(display_data)
                           .min(12)
@@ -79,9 +77,9 @@ function biparite_build(g, file_name, stat_id, stat_name){
       group.selectAll(".mainBars")
         .append("text")
         .attr("class","label")
-        .attr("x",e=>(e.part=="primary"? -Math.floor(WIDTH*0.015): Math.floor(WIDTH*0.015)))//-Math.floor(WIDTH*0.0195): Math.floor(WIDTH*0.0195)))
+        .attr("x",e=>(e.part=="primary"? -Math.floor(WIDTH*0.015) : Math.floor(WIDTH*0.015)))
         .attr("y",e=>6)
-        .text(e=>e.key)
+        .text(e=>(e.part=="primary"? e.key : (e.key).toString().substring(1)))
         .transition()
         .duration(1000)
         .style("fill", '#63474d')
@@ -113,8 +111,6 @@ function build_biparite_ratings(){
   biparite_svg.selectAll("*")
               .remove();
 
-
-
   // display and position biparite title
   const text_height = "4vh";
   const mid_bp_width = Math.floor(WIDTH*(0.65/2))
@@ -132,6 +128,77 @@ function build_biparite_ratings(){
   var g = biparite_svg.append("g").attr("transform","translate(150,100)");
 
   biparite_build(g, "./data/biparite_ratings.csv", "rating_cat", "Ratings")
+}
+
+
+function build_biparite_pages(){
+  biparite_svg.selectAll("*")
+              .remove();
+
+  // display and position biparite title
+  const text_height = "4vh";
+  const mid_bp_width = Math.floor(WIDTH*(0.65/2))
+  biparite_svg.append("text")
+      .attr("x",mid_bp_width)
+      .attr("y",40)
+      .attr("class","header")
+      .text("Genres VS Pages")
+      .style("fill", '#63474d')
+      .style("font-family", "Sacramento")
+      .style("font-size", text_height)
+      .style("font-family", "Sacramento")
+      .attr("transform","translate(-100,0)");
+
+  var g = biparite_svg.append("g").attr("transform","translate(150,100)");
+
+  biparite_build(g, "./data/biparite_pages.csv", "pages_cat", "Pages")
+}
+
+function build_biparite_title(){
+  biparite_svg.selectAll("*")
+              .remove();
+
+  // display and position biparite title
+  const text_height = "4vh";
+  const mid_bp_width = Math.floor(WIDTH*(0.65/2))
+  biparite_svg.append("text")
+      .attr("x",mid_bp_width)
+      .attr("y",40)
+      .attr("class","header")
+      .text("Genres VS Title length")
+      .style("fill", '#63474d')
+      .style("font-family", "Sacramento")
+      .style("font-size", text_height)
+      .style("font-family", "Sacramento")
+      .attr("transform","translate(-100,0)");
+
+  var g = biparite_svg.append("g").attr("transform","translate(150,100)");
+
+  biparite_build(g, "./data/biparite_titles.csv", "title_cat", "Title length")
+}
+
+
+function build_biparite_price(){
+  biparite_svg.selectAll("*")
+              .remove();
+
+  // display and position biparite title
+  const text_height = "4vh";
+  const mid_bp_width = Math.floor(WIDTH*(0.65/2))
+  biparite_svg.append("text")
+      .attr("x",mid_bp_width)
+      .attr("y",40)
+      .attr("class","header")
+      .text("Genres VS Price")
+      .style("fill", '#63474d')
+      .style("font-family", "Sacramento")
+      .style("font-size", text_height)
+      .style("font-family", "Sacramento")
+      .attr("transform","translate(-100,0)");
+
+  var g = biparite_svg.append("g").attr("transform","translate(150,100)");
+
+  biparite_build(g, "./data/biparite_price.csv", "price_cat", "Price")
 }
 
 window.addEventListener('load', function() {

@@ -1,0 +1,71 @@
+genre,pages_cat,count
+Young Adult,a50 or less,28
+X and Erotica,a50 or less,21
+Science Fiction,a50 or less,22
+Romance,a50 or less,44
+Poetry,a50 or less,36
+Philosophy,a50 or less,8
+Mystery,a50 or less,48
+Horror,a50 or less,27
+Fiction,a50 or less,67
+Fantasy,a50 or less,90
+Classics,a50 or less,34
+Young Adult,b50-200 pages,322
+X and Erotica,b50-200 pages,85
+Science Fiction,b50-200 pages,153
+Romance,b50-200 pages,329
+Poetry,b50-200 pages,295
+Philosophy,b50-200 pages,153
+Mystery,b50-200 pages,204
+Manga,b50-200 pages,354
+Horror,b50-200 pages,245
+Fiction,b50-200 pages,908
+Fantasy,b50-200 pages,475
+Classics,b50-200 pages,224
+Young Adult,c200-300 pages,1178
+X and Erotica,c200-300 pages,97
+Science Fiction,c200-300 pages,309
+Romance,c200-300 pages,856
+Poetry,c200-300 pages,115
+Philosophy,c200-300 pages,117
+Mystery,c200-300 pages,512
+Manga,c200-300 pages,122
+Horror,c200-300 pages,393
+Fiction,c200-300 pages,1749
+Fantasy,c200-300 pages,929
+Classics,c200-300 pages,184
+Young Adult,d300-500 pages,1591
+X and Erotica,d300-500 pages,116
+Science Fiction,d300-500 pages,604
+Romance,d300-500 pages,2469
+Poetry,d300-500 pages,89
+Philosophy,d300-500 pages,131
+Mystery,d300-500 pages,1397
+Manga,d300-500 pages,44
+Horror,d300-500 pages,748
+Fiction,d300-500 pages,3454
+Fantasy,d300-500 pages,2700
+Classics,d300-500 pages,274
+Young Adult,e500-1000 pages,122
+X and Erotica,e500-1000 pages,7
+Science Fiction,e500-1000 pages,214
+Romance,e500-1000 pages,174
+Poetry,e500-1000 pages,53
+Philosophy,e500-1000 pages,62
+Mystery,e500-1000 pages,155
+Manga,e500-1000 pages,18
+Horror,e500-1000 pages,141
+Fiction,e500-1000 pages,994
+Fantasy,e500-1000 pages,714
+Classics,e500-1000 pages,164
+Young Adult,f1000 or more,19
+Science Fiction,f1000 or more,14
+Romance,f1000 or more,10
+Poetry,f1000 or more,17
+Philosophy,f1000 or more,13
+Mystery,f1000 or more,5
+Manga,f1000 or more,8
+Horror,f1000 or more,13
+Fiction,f1000 or more,84
+Fantasy,f1000 or more,119
+Classics,f1000 or more,38
