@@ -8,7 +8,7 @@
 | Arnaud Gaudard | 269672 |
 | Roxane Pangaud | 283177 |
 
-[Milestone 1](milestones/Milestone1Submission.pdf) • [Milestone 2](milestones/Milestone2Submission.pdf) • [Process Book](milestones/Milestone3Handout.pdf) • [Screencast](milestones/Milestone3Handout.pdf)
+[Milestone 1](milestones/Milestone1Submission.pdf) • [Milestone 2](milestones/Milestone2Submission.pdf) • [Process Book](milestones/Milestone3Handout.pdf) • [Screencast](milestones/screencast.mp4)
 
 [Website](https://com-480-data-visualization.github.io/datavis-project-2022-team_philippe/website/)
 
