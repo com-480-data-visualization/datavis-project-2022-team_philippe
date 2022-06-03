@@ -27,7 +27,7 @@ button_l2_s5.addEventListener('click', function() {dialog_l2_s5.innerHTML=texts_
 const philippe_img_l4s1 = document.getElementById("philippe-icon-l4-s1");
 const button_l4_s1 = document.getElementById('speech-button-l4-s1');
 const dialog_l4_s1 = document.getElementById('dialog_l4_s1');
-const texts_l4_s1 = [`How about learning a<br>little more on litterature?`, `Slide right to discover<br>hidden truths &nbsp; <i class="fa-solid fa-arrow-right-long yellow" onclick="myFullpage.moveSlideRight();"></i>`];
+const texts_l4_s1 = [`How about learning a<br>little more on literature?`, `Slide right to discover<br>hidden truths! &nbsp; <i class="fa-solid fa-arrow-right-long yellow" onclick="myFullpage.moveSlideRight();"></i>`];
 var current_txt_l4_s1=0;
 button_l4_s1.addEventListener('click', function() {
   dialog_l4_s1.innerHTML=texts_l4_s1[current_txt_l4_s1%texts_l4_s1.length];
