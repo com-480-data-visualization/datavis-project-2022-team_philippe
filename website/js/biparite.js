@@ -1,19 +1,43 @@
+// --radio buttons--
+d3.selectAll(".biparite-label")
+  .on("mousedown", function(event) {
+    d3.select(this).classed("biparite-label-pressed", true);
+  })
+  .on("mouseup", function(event) {
+    d3.select(this).classed("biparite-label-pressed", false);
+  });
+
+d3.selectAll(".biparite-radio")
+  .on("change", function(event) {
+    var which_radio = d3.select(this).attr("value");
+    var dictionary = {
+      "ratings": build_biparite_ratings,
+      "pages": build_biparite_pages,
+      "title_length": build_biparite_title,
+      "price": build_biparite_price
+    };
+    dictionary[which_radio]();  // big brain here.
+
+    d3.selectAll(".biparite-label").classed("biparite-label-checked", false);
+    d3.select(d3.select(this).node().parentNode).classed("biparite-label-checked", true);
+  });
+
+// -- graph--
 
 const WIDTH = window.screen.width;
 const HEIGHT = window.screen.height;
 const stats = ["rating", "page", "title_length", "price"];
 
 var biparite_svg = d3v4.select("#biparite-vizu")
-                    .append("svg")
-                    .attr("width", Math.floor(WIDTH*0.65))
-                    .attr("height", Math.floor(HEIGHT*0.7));
-
+  .append("svg")
+  .attr("width", 900)
+  .attr("height", 510);
 
 function biparite_build(g, file_name, stat_id, stat_name){
-  const bp_title = "Genre VS "+stat_name;
+  d3.select("#biparite-title").text(`Genres VS ${stat_name}`);
 
   d3v4.csv(file_name, function(error, raw_data) {
-    var display_data = []
+    var display_data = [];
 
     raw_data.forEach(function(row) {
       var buff_arr = new Array(0);
@@ -32,18 +56,17 @@ function biparite_build(g, file_name, stat_id, stat_name){
                   .style("fill", 'black');
 
       // position the bp element in the global svg
-      const translate_factor = Math.floor(WIDTH*0.18).toString() + "," + Math.floor(WIDTH*0.04).toString();
       var group = biparite_svg.append("g")
-                          .attr("transform","translate("+translate_factor+")");
+                          .attr("transform","translate(200, 0)");
 
       // init main biparite logic using bipartitelib
       var biparite_graph = viz.bP()
                           .data(display_data)
                           .min(12)
                           .pad(1.5)
-                          .height(Math.floor(HEIGHT*0.6))
-                          .width(Math.floor(WIDTH*0.3))
-                          .barSize(WIDTH*0.023)
+                          .height(500)
+                          .width(500)
+                          .barSize(30)
                           .fill(e => '#63474d');
 
       group.call(biparite_graph).transition().duration(1000);
@@ -77,9 +100,9 @@ function biparite_build(g, file_name, stat_id, stat_name){
       group.selectAll(".mainBars")
         .append("text")
         .attr("class","label")
-        .attr("x",e=>(e.part=="primary"? -Math.floor(WIDTH*0.015) : Math.floor(WIDTH*0.015)))
-        .attr("y",e=>6)
-        .text(e=>(e.part=="primary"? e.key : (e.key).toString().substring(1)))
+        .attr("x", e => (e.part=="primary"? -Math.floor(WIDTH*0.015) : Math.floor(WIDTH*0.015)))
+        .attr("y", e => 6)
+        .text(e => (e.part=="primary"? e.key : (e.key).toString().substring(1)))
         .transition()
         .duration(1000)
         .style("fill", '#63474d')
@@ -91,16 +114,16 @@ function biparite_build(g, file_name, stat_id, stat_name){
       group.selectAll(".mainBars")
         .append("text")
         .attr("class","perc")
-        .attr("x",e=>(e.part=="primary"? -(Math.floor(WIDTH*0.015)+120): Math.floor(WIDTH*0.015)+120))
+        .attr("x", e => (e.part=="primary"? -(Math.floor(WIDTH*0.015)+120): Math.floor(WIDTH*0.015)+120))
         .style("fill", '#63474d')
-        .attr("y",e=>6)
+        .attr("y", e => 6)
         .text(function(e){return "  "+d3v4.format("0.0%")(e.percent);})
         .transition()
         .duration(1000)
         .attr("text-anchor",e=>(e.part=="primary"? "end": "start"));
 
       d3v4.select(self.frameElement)
-        .style("height", Math.floor(HEIGHT*0.75));
+        .style("height", 650);
       }
 
       biparite_update(display_data, g);
@@ -108,23 +131,7 @@ function biparite_build(g, file_name, stat_id, stat_name){
 }
 
 function build_biparite_ratings(){
-  biparite_svg.selectAll("*")
-              .remove();
-
-  // display and position biparite title
-  const text_height = "4vh";
-  const mid_bp_width = Math.floor(WIDTH*(0.65/2))
-  biparite_svg.append("text")
-      .attr("x",mid_bp_width)
-      .attr("y",40)
-      .attr("class","header")
-      .text("Genres VS Ratings")
-      .style("fill", '#63474d')
-      .style("font-family", "Sacramento")
-      .style("font-size", text_height)
-      .style("font-family", "Sacramento")
-      .attr("transform","translate(-100,0)");
-
+  biparite_svg.selectAll("*").remove();
   var g = biparite_svg.append("g").attr("transform","translate(150,100)");
 
   biparite_build(g, "./data/biparite_ratings.csv", "rating_cat", "Ratings")
@@ -132,46 +139,14 @@ function build_biparite_ratings(){
 
 
 function build_biparite_pages(){
-  biparite_svg.selectAll("*")
-              .remove();
-
-  // display and position biparite title
-  const text_height = "4vh";
-  const mid_bp_width = Math.floor(WIDTH*(0.65/2))
-  biparite_svg.append("text")
-      .attr("x",mid_bp_width)
-      .attr("y",40)
-      .attr("class","header")
-      .text("Genres VS Pages")
-      .style("fill", '#63474d')
-      .style("font-family", "Sacramento")
-      .style("font-size", text_height)
-      .style("font-family", "Sacramento")
-      .attr("transform","translate(-100,0)");
-
+  biparite_svg.selectAll("*").remove();
   var g = biparite_svg.append("g").attr("transform","translate(150,100)");
 
   biparite_build(g, "./data/biparite_pages.csv", "pages_cat", "Pages")
 }
 
 function build_biparite_title(){
-  biparite_svg.selectAll("*")
-              .remove();
-
-  // display and position biparite title
-  const text_height = "4vh";
-  const mid_bp_width = Math.floor(WIDTH*(0.65/2))
-  biparite_svg.append("text")
-      .attr("x",mid_bp_width)
-      .attr("y",40)
-      .attr("class","header")
-      .text("Genres VS Title length")
-      .style("fill", '#63474d')
-      .style("font-family", "Sacramento")
-      .style("font-size", text_height)
-      .style("font-family", "Sacramento")
-      .attr("transform","translate(-100,0)");
-
+  biparite_svg.selectAll("*").remove();
   var g = biparite_svg.append("g").attr("transform","translate(150,100)");
 
   biparite_build(g, "./data/biparite_titles.csv", "title_cat", "Title length")
@@ -179,23 +154,7 @@ function build_biparite_title(){
 
 
 function build_biparite_price(){
-  biparite_svg.selectAll("*")
-              .remove();
-
-  // display and position biparite title
-  const text_height = "4vh";
-  const mid_bp_width = Math.floor(WIDTH*(0.65/2))
-  biparite_svg.append("text")
-      .attr("x",mid_bp_width)
-      .attr("y",40)
-      .attr("class","header")
-      .text("Genres VS Price")
-      .style("fill", '#63474d')
-      .style("font-family", "Sacramento")
-      .style("font-size", text_height)
-      .style("font-family", "Sacramento")
-      .attr("transform","translate(-100,0)");
-
+  biparite_svg.selectAll("*").remove();
   var g = biparite_svg.append("g").attr("transform","translate(150,100)");
 
   biparite_build(g, "./data/biparite_price.csv", "price_cat", "Price")

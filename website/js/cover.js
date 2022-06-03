@@ -10,11 +10,11 @@ function global_get_cover_style() {
 
   return data_row => {
     var res = [
-      data_row.paperback && values.flexible,
-      data_row.hardcover && values.hard,
-      data_row.ebook && values.ebook,
-      data_row.audiobook && values.audiobook,
-      data_row.other && values.other,
+      (data_row.paperback == "1.0") && values.flexible,
+      (data_row.hardcover == "1.0") && values.hard,
+      (data_row.ebook == "1.0") && values.ebook,
+      (data_row.audiobook == "1.0") && values.audiobook,
+      (data_row.other == "1.0") && values.other,
     ]
 
     return res.indexOf(true) != -1;

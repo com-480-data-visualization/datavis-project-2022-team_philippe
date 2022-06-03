@@ -82,3 +82,14 @@
 
   font-size: 3rem;
 }
+
+.angry-philippe-name {
+	font-size: 3vh;
+	justify-content: center;
+	font-family: "Aktiv Grotesk", Helvetica, sans-serif;
+	color: white;
+	font-weight: bold;
+	display: flex;
+	margin-top: 1%;
+	transform: translate(-1.6%, 0%);
+}

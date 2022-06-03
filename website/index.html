@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/bubbles.css" />
     <link rel="stylesheet" type="text/css" href="css/book-size.css" />
     <link rel="stylesheet" type="text/css" href="css/coins.css" />
+    <link rel="stylesheet" type="text/css" href="css/bipartite.css" />
 
     <!-- Webpage Title & Icon-->
     <title>Studio Bibli</title>
@@ -312,7 +313,7 @@
                 <div class="philippe-centered">
                   <img src="./img/6-fococlipping-standard.png" alt="PHILIPPE centered image"/>
                 </div>
-                <div class="philippe-name">
+                <div class="angry-philippe-name">
                   <span>PHILIPPE</span>
                 </div>
             </div>
@@ -343,12 +344,30 @@
             </div>
           </div>
 
-          <div class="slide relative-slide">
+          <div class="slide">
             <div id="biparite-flex-container">
-              <span id="biparite-title" class="text-open-sans-ultrabold white title-cover-pos">Genres VS Ratings</span>
+              <div id="biparite-title" class="text-open-sans-ultrabold white">Genres VS Ratings</div>
               <div id="biparite-vizu"></div>
               <div id="biparite-buttons">
-                <label class="rad-label" id="rad-but1">
+                <label class="biparite-label biparite-label-checked" for="biparite-ratings">
+                  <span class="biparite-label-text">Rating</span>
+                  <input type="radio" class="biparite-radio" id="biparite-ratings" name="biparite-graph-type" value="ratings" checked>
+                </label>
+                <label class="biparite-label" for="biparite-pages">
+                  <span class="biparite-label-text">Pages</span>
+                  <input type="radio" class="biparite-radio" id="biparite-pages" name="biparite-graph-type" value="pages">
+                </label>
+                <label class="biparite-label" for="biparite-title-length">
+                  <span class="biparite-label-text">Title Length</span>
+                  <input type="radio" class="biparite-radio" id="biparite-title-length" name="biparite-graph-type" value="title_length">
+                </label>
+                <label class="biparite-label" for="biparite-price">
+                  <span class="biparite-label-text">Price</span>
+                  <input type="radio" class="biparite-radio" id="biparite-price" name="biparite-graph-type" value="price">
+                </label>
+
+
+                <!-- <label class="rad-label" id="rad-but1">
                   <input type="radio" class="rad-input" name="rad">
                   <div class="rad-design"></div>
                   <div class="rad-text">Air</div>
@@ -367,7 +386,7 @@
                   <input type="radio" class="rad-input" name="rad">
                   <div class="rad-design"></div>
                   <div class="rad-text">Water</div>
-                </label>
+                </label> -->
               </div>
             </div>
 
