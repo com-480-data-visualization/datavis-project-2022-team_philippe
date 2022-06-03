@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/cat.css" />
     <link rel="stylesheet" type="text/css" href="css/bubbles.css" />
     <link rel="stylesheet" type="text/css" href="css/book-size.css" />
+    <link rel="stylesheet" type="text/css" href="css/coins.css" />
 
     <!-- Webpage Title & Icon-->
     <title>Studio Bibli</title>
@@ -232,7 +233,7 @@
               <img src = "./img/side_coin.svg" id="coin2" class="coins-widget ghost-elem" style="transform: translate(-0.3vw, 0px);"/>
               <img src = "./img/side_coin.svg" id="coin1" class="coins-widget ghost-elem"/>
               <img src = "./img/side_coin.svg" class="coins-widget" style="transform: translate(-0.3vw, 0px);"/>
-              <img src = "./img/side_coin.svg" class="coins-widget"/>
+              <img src = "./img/side_coin.svg" class="coins-widget" id="red-coin"/>
             </div>
             <img src = "./img/facing_coin.svg" id="face-coin" class="face-coin-widget"/>
             <img src="./img/4-fococlipping-standard.png" id="p7-popup" class="philippe-popup ghost-elem" style="transform:rotate(-25deg);"/>
@@ -343,28 +344,33 @@
           </div>
 
           <div class="slide relative-slide">
-              <label class="rad-label" id="rad-but1">
-                <input type="radio" class="rad-input" name="rad">
-                <div class="rad-design"></div>
-                <div class="rad-text">Air</div>
-              </label>
-              <label class="rad-label" id="rad-but2">
-                <input type="radio" class="rad-input" name="rad">
-                <div class="rad-design"></div>
-                <div class="rad-text">Clouds</div>
-              </label>
-              <label class="rad-label" id="rad-but3">
-                <input type="radio" class="rad-input" name="rad">
-                <div class="rad-design"></div>
-                <div class="rad-text">Earth</div>
-              </label>
-              <label class="rad-label" id="rad-but4">
-                <input type="radio" class="rad-input" name="rad">
-                <div class="rad-design"></div>
-                <div class="rad-text">Water</div>
-              </label>
+            <div id="biparite-flex-container">
+              <span id="biparite-title" class="text-open-sans-ultrabold white title-cover-pos">Genres VS Ratings</span>
+              <div id="biparite-vizu"></div>
+              <div id="biparite-buttons">
+                <label class="rad-label" id="rad-but1">
+                  <input type="radio" class="rad-input" name="rad">
+                  <div class="rad-design"></div>
+                  <div class="rad-text">Air</div>
+                </label>
+                <label class="rad-label" id="rad-but2">
+                  <input type="radio" class="rad-input" name="rad">
+                  <div class="rad-design"></div>
+                  <div class="rad-text">Clouds</div>
+                </label>
+                <label class="rad-label" id="rad-but3">
+                  <input type="radio" class="rad-input" name="rad">
+                  <div class="rad-design"></div>
+                  <div class="rad-text">Earth</div>
+                </label>
+                <label class="rad-label" id="rad-but4">
+                  <input type="radio" class="rad-input" name="rad">
+                  <div class="rad-design"></div>
+                  <div class="rad-text">Water</div>
+                </label>
+              </div>
+            </div>
 
-            <div id="biparite-vizu" class="center-svg"></div>
           </div>
           <div class="slide">
             <span class="medium">Circular Timeline of published books</span>
